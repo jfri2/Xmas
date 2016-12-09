@@ -1,5 +1,5 @@
 M48
-;DRILL file {KiCad (2016-11-12 revision b9c62b6)-makepkg} date 12/04/16 22:26:28
+;DRILL file {KiCad (2016-12-02 revision 54c5f6b)-makepkg} date 12/08/16 22:01:34
 ;FORMAT={2:4/ absolute / inch / suppress trailing zeros}
 FMAT,2
 INCH,LZ
@@ -9,6 +9,6 @@ G90
 G05
 M72
 T1
-X05407Y-04771
+X04613Y-029
 T0
 M30
