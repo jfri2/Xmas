@@ -1729,9 +1729,7 @@ Connection ~ 3025 9825
 Wire Wire Line
 	12475 9025 12475 9125
 Wire Wire Line
-	12775 9000 12775 9475
-Wire Wire Line
-	12775 9475 12475 9475
+	12750 9475 12475 9475
 Wire Wire Line
 	12475 9425 12475 9500
 Connection ~ 12475 9475
@@ -2182,7 +2180,7 @@ Connection ~ 4775 3800
 Wire Wire Line
 	1450 3675 1450 3650
 Wire Wire Line
-	4775 3650 1450 3650
+	1450 3650 4775 3650
 Connection ~ 4775 3650
 Wire Wire Line
 	3525 3675 3525 3650
@@ -2239,13 +2237,13 @@ Wire Wire Line
 Wire Wire Line
 	4925 4550 4725 4550
 Wire Wire Line
-	4725 4675 4725 4550
+	4725 4550 4725 4675
 Wire Wire Line
-	3875 4675 4725 4675
+	4725 4675 3875 4675
 Wire Wire Line
 	3950 4475 3875 4475
 Wire Wire Line
-	3875 4425 3875 4675
+	3875 4675 3875 4425
 Wire Wire Line
 	4050 4725 4050 4675
 Connection ~ 4050 4675
@@ -2308,13 +2306,13 @@ Text Notes 9450 7350 0    60   ~ 0
 TCC1.0
 Text Notes 9450 7250 0    60   ~ 0
 TCC1.1
-Text GLabel 9825 6550 2    47   Output ~ 0
-GLED_6
-Text GLabel 9825 6450 2    47   Output ~ 0
-RLED_6
 Text GLabel 9825 6750 2    47   Output ~ 0
-GLED_5
+GLED_6
 Text GLabel 9825 6650 2    47   Output ~ 0
+RLED_6
+Text GLabel 9825 6550 2    47   Output ~ 0
+GLED_5
+Text GLabel 9825 6450 2    47   Output ~ 0
 RLED_5
 Text GLabel 9825 6950 2    47   Output ~ 0
 GLED_4
@@ -2943,4 +2941,14 @@ Wire Wire Line
 Text GLabel 14450 5300 0    47   Output ~ 0
 ~PB
 NoConn ~ 9375 7550
+Wire Wire Line
+	12775 9000 12750 9000
+Wire Wire Line
+	12750 9000 12750 9475
+Wire Wire Line
+	12775 9200 12750 9200
+Connection ~ 12750 9200
+Wire Wire Line
+	12775 9100 12750 9100
+Connection ~ 12750 9100
 $EndSCHEMATC
