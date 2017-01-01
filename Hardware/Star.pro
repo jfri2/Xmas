@@ -1,4 +1,4 @@
-update=12/4/2016 8:13:51 PM
+update=12/15/2016 9:45:48 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -61,3 +61,13 @@ LibName29=valves
 LibName30=C:/Users/John/Documents/Products/KiCAD_Common/newFritzLib
 LibName31=FritzLib
 LibName32=C:/Users/John/Documents/Products/KiCAD_Common/ATSAML21J
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=Gerbers/
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceAjustPassiveValues=0
+LabSize=60
+ERC_TestSimilarLabels=1
