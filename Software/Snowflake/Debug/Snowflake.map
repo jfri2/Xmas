@@ -369,6 +369,7 @@ Discarded input sections
  .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
  .group         0x00000000        0x8 main.o
+ .group         0x00000000        0x8 main.o
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .debug_macro   0x00000000      0x826 main.o
@@ -778,7 +779,7 @@ OUTPUT(Snowflake.elf elf32-littlearm)
  .debug_ranges  0x00000018       0x18 Device_Startup/system_saml21.o
  .debug_ranges  0x00000030       0x10 main.o
 
-.debug_macro    0x00000000    0x1408f
+.debug_macro    0x00000000    0x140ce
  .debug_macro   0x00000000      0x371 Device_Startup/startup_saml21.o
  .debug_macro   0x00000371      0x826 Device_Startup/startup_saml21.o
  .debug_macro   0x00000b97       0x22 Device_Startup/startup_saml21.o
@@ -864,20 +865,21 @@ OUTPUT(Snowflake.elf elf32-littlearm)
  .debug_macro   0x00011475     0x24a2 Device_Startup/startup_saml21.o
  .debug_macro   0x00013917       0x90 Device_Startup/startup_saml21.o
  .debug_macro   0x000139a7      0x377 Device_Startup/system_saml21.o
- .debug_macro   0x00013d1e      0x371 main.o
+ .debug_macro   0x00013d1e      0x38e main.o
+ .debug_macro   0x000140ac       0x22 main.o
 
-.debug_line     0x00000000     0x15d0
+.debug_line     0x00000000     0x15ff
  .debug_line    0x00000000      0x75f Device_Startup/startup_saml21.o
  .debug_line    0x0000075f      0x74f Device_Startup/system_saml21.o
- .debug_line    0x00000eae      0x722 main.o
+ .debug_line    0x00000eae      0x751 main.o
 
-.debug_str      0x00000000    0x7e4e9
+.debug_str      0x00000000    0x7e540
  .debug_str     0x00000000    0x7e43a Device_Startup/startup_saml21.o
                               0x7e83a (size before relaxing)
  .debug_str     0x0007e43a       0x6c Device_Startup/system_saml21.o
                               0x7e357 (size before relaxing)
- .debug_str     0x0007e4a6       0x43 main.o
-                              0x7e310 (size before relaxing)
+ .debug_str     0x0007e4a6       0x9a main.o
+                              0x7e367 (size before relaxing)
 
 .debug_frame    0x00000000      0x1a0
  .debug_frame   0x00000000       0x38 Device_Startup/startup_saml21.o

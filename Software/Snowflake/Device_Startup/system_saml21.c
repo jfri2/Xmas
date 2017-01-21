@@ -59,6 +59,7 @@ void SystemInit(void)
          *  Allow dynamic configuration of GPIO by passing configuration struct
          *  Initialize all GPIOs on board to their functions & set default lvls
          *********************************************************************/
+    
 	
     // Initialize PWM (TC and TCC modules for PWM only)
         /**********************************************************************

@@ -24,10 +24,10 @@
 
 // Includes
 #include "sam.h"
+#include "Drivers/gpio.h"
+#include "board.h"
 
-// Macros
 
-// Function Prototypes
 
 // State Machine Definitions
 typedef enum 
@@ -36,14 +36,14 @@ typedef enum
     PLAY,
     PROG, 
     SLEEP
-} top_state_t;   // Top state machine states
+} eTopState;   // Top state machine states
 
 // enum idle_state_t {};                       // Idle sub-state machine states
 // enum play_state_t {};                       // Play sub-state machine states
 // enum prog_state_t {};                       // Prog sub-state machine states
 // enum sleep_state_t {};                      // Sleep sub-state machine states    
     
-volatile top_state_t top_state = IDLE;
+volatile eTopState top_state = IDLE;
     
 
 int main(void)
