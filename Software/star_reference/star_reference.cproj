@@ -30,14 +30,17 @@
       <framework-data>
   <options>
     <option id="common.boards" value="Add" config="" content-id="Atmel.ASF" />
+    <option id="common2.services.delay" value="Add" config="systick" content-id="Atmel.ASF" />
     <option id="sam0.drivers.port" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam0.drivers.system" value="Add" config="" content-id="Atmel.ASF" />
-    <option id="common2.services.delay" value="Add" config="systick" content-id="Atmel.ASF" />
+    <option id="common.services.usb.class.device" value="Add" config="cdc" content-id="Atmel.ASF" />
     <option id="common.applications.user_application.xplained_pro2" value="Add" config="" content-id="Atmel.ASF" />
     <option id="common.utils" value="Add" config="" content-id="Atmel.ASF" />
     <option id="sam0.utils.cmsis.saml21.source.template" value="Add" config="" content-id="Atmel.ASF" />
   </options>
-  <configurations />
+  <configurations>
+    <configuration key="config.sam0.drivers.extint" value="callback" default="callback" content-id="Atmel.ASF" />
+  </configurations>
   <files>
     <file path="src/main.c" framework="" version="" source="common2/applications/xplained_pro_user_application/main.c" changed="False" content-id="Atmel.ASF" />
     <file path="src/config/conf_board.h" framework="" version="" source="common2/applications/xplained_pro_user_application/saml21j18b_saml21_xplained_pro/config/conf_board.h" changed="False" content-id="Atmel.ASF" />
@@ -185,6 +188,35 @@
     <file path="src/ASF/common2/services/delay/sam0/systick_counter.c" framework="" version="3.32.0" source="common2\services\delay\sam0\systick_counter.c" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/common2/services/delay/delay.h" framework="" version="3.32.0" source="common2\services\delay\delay.h" changed="False" content-id="Atmel.ASF" />
     <file path="src/ASF/common2/services/delay/sam0/systick_counter.h" framework="" version="3.32.0" source="common2\services\delay\sam0\systick_counter.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/sleepmgr/saml/sleepmgr.c" framework="" version="3.32.0" source="common\services\sleepmgr\saml\sleepmgr.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/sleepmgr/sleepmgr.h" framework="" version="3.32.0" source="common\services\sleepmgr\sleepmgr.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/sleepmgr/saml/sleepmgr.h" framework="" version="3.32.0" source="common\services\sleepmgr\saml\sleepmgr.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/Config/conf_sleepmgr.h" framework="" version="3.32.0" source="common\services\sleepmgr\saml\module_config\conf_sleepmgr.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/usb_atmel.h" framework="" version="3.32.0" source="common\services\usb\usb_atmel.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/usb_protocol.h" framework="" version="3.32.0" source="common\services\usb\usb_protocol.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/class/cdc/usb_protocol_cdc.h" framework="" version="3.32.0" source="common\services\usb\class\cdc\usb_protocol_cdc.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc.c" framework="" version="3.32.0" source="common\services\usb\class\cdc\device\udi_cdc.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc_desc.c" framework="" version="3.32.0" source="common\services\usb\class\cdc\device\udi_cdc_desc.c" changed="False" content-id="Atmel.ASF" />
+    <file path="atmel_devices_cdc.cat" framework="" version="3.32.0" source="common\services\usb\class\cdc\device\atmel_devices_cdc.cat" changed="False" content-id="Atmel.ASF" />
+    <file path="atmel_devices_cdc.inf" framework="" version="3.32.0" source="common\services\usb\class\cdc\device\atmel_devices_cdc.inf" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc.h" framework="" version="3.32.0" source="common\services\usb\class\cdc\device\udi_cdc.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/class/cdc/device/udi_cdc_conf.h" framework="" version="3.32.0" source="common\services\usb\class\cdc\device\udi_cdc_conf.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/Config/conf_usb.h" framework="" version="3.32.0" source="common\services\usb\class\cdc\device\module_config\conf_usb.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/udc/udc.c" framework="" version="3.32.0" source="common\services\usb\udc\udc.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/udc/udc.h" framework="" version="3.32.0" source="common\services\usb\udc\udc.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/udc/udd.h" framework="" version="3.32.0" source="common\services\usb\udc\udd.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/udc/udc_desc.h" framework="" version="3.32.0" source="common\services\usb\udc\udc_desc.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/common/services/usb/udc/udi.h" framework="" version="3.32.0" source="common\services\usb\udc\udi.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/extint/extint_callback.c" framework="" version="3.32.0" source="sam0\drivers\extint\extint_callback.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/extint/extint_callback.h" framework="" version="3.32.0" source="sam0\drivers\extint\extint_callback.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/extint/extint.h" framework="" version="3.32.0" source="sam0\drivers\extint\extint.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/Config/conf_extint.h" framework="" version="3.32.0" source="sam0\drivers\extint\module_config\conf_extint.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/extint/extint_sam_l_c/extint.c" framework="" version="3.32.0" source="sam0\drivers\extint\extint_sam_l_c\extint.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/usb/usb_sam_l/usb.c" framework="" version="3.32.0" source="sam0\drivers\usb\usb_sam_l\usb.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/usb/usb.h" framework="" version="3.32.0" source="sam0\drivers\usb\usb.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/usb/stack_interface/usb_dual.c" framework="" version="3.32.0" source="sam0\drivers\usb\stack_interface\usb_dual.c" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/usb/stack_interface/usb_dual.h" framework="" version="3.32.0" source="sam0\drivers\usb\stack_interface\usb_dual.h" changed="False" content-id="Atmel.ASF" />
+    <file path="src/ASF/sam0/drivers/usb/stack_interface/usb_device_udd.c" framework="" version="3.32.0" source="sam0\drivers\usb\stack_interface\usb_device_udd.c" changed="False" content-id="Atmel.ASF" />
   </files>
   <documentation help="http://asf.atmel.com/docs/3.32.0/common.applications.user_application.xplained_pro2.saml21_xplained_pro_b/html/index.html" />
   <offline-documentation help="" />
@@ -239,6 +271,9 @@
       <Value>BOARD=SAML21_XPLAINED_PRO</Value>
       <Value>ARM_MATH_CM0PLUS=true</Value>
       <Value>SYSTICK_MODE</Value>
+      <Value>USB_DEVICE_LPM_SUPPORT</Value>
+      <Value>UDD_ENABLE</Value>
+      <Value>EXTINT_CALLBACK_MODE=true</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -269,6 +304,16 @@
       <Value>../src/config</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/common/services/usb</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+      <Value>../src/ASF/common/services/usb/udc</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_l_c</Value>
+      <Value>../src/ASF/sam0/drivers/usb</Value>
+      <Value>../src/ASF/sam0/drivers/usb/usb_sam_l</Value>
+      <Value>../src/ASF/sam0/drivers/usb/stack_interface</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
@@ -318,9 +363,19 @@
       <Value>../src/config</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/common/services/usb</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+      <Value>../src/ASF/common/services/usb/udc</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_l_c</Value>
+      <Value>../src/ASF/sam0/drivers/usb</Value>
+      <Value>../src/ASF/sam0/drivers/usb/usb_sam_l</Value>
+      <Value>../src/ASF/sam0/drivers/usb/stack_interface</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAML21_XPLAINED_PRO -D__SAML21J18B__ -DSYSTICK_MODE</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAML21_XPLAINED_PRO -D__SAML21J18B__ -DSYSTICK_MODE -DUSB_DEVICE_LPM_SUPPORT -DUDD_ENABLE -DEXTINT_CALLBACK_MODE=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../src/ASF/common/boards</Value>
@@ -349,6 +404,16 @@
       <Value>../src/config</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/common/services/usb</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+      <Value>../src/ASF/common/services/usb/udc</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_l_c</Value>
+      <Value>../src/ASF/sam0/drivers/usb</Value>
+      <Value>../src/ASF/sam0/drivers/usb/usb_sam_l</Value>
+      <Value>../src/ASF/sam0/drivers/usb/stack_interface</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
 </ArmGcc>
@@ -369,6 +434,9 @@
       <Value>BOARD=SAML21_XPLAINED_PRO</Value>
       <Value>ARM_MATH_CM0PLUS=true</Value>
       <Value>SYSTICK_MODE</Value>
+      <Value>USB_DEVICE_LPM_SUPPORT</Value>
+      <Value>UDD_ENABLE</Value>
+      <Value>EXTINT_CALLBACK_MODE=true</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -399,6 +467,16 @@
       <Value>../src/config</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/common/services/usb</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+      <Value>../src/ASF/common/services/usb/udc</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_l_c</Value>
+      <Value>../src/ASF/sam0/drivers/usb</Value>
+      <Value>../src/ASF/sam0/drivers/usb/usb_sam_l</Value>
+      <Value>../src/ASF/sam0/drivers/usb/stack_interface</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -449,10 +527,20 @@
       <Value>../src/config</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/common/services/usb</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+      <Value>../src/ASF/common/services/usb/udc</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_l_c</Value>
+      <Value>../src/ASF/sam0/drivers/usb</Value>
+      <Value>../src/ASF/sam0/drivers/usb/usb_sam_l</Value>
+      <Value>../src/ASF/sam0/drivers/usb/stack_interface</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
-  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAML21_XPLAINED_PRO -D__SAML21J18B__ -DSYSTICK_MODE</armgcc.preprocessingassembler.general.AssemblerFlags>
+  <armgcc.preprocessingassembler.general.AssemblerFlags>-DARM_MATH_CM0PLUS=true -DBOARD=SAML21_XPLAINED_PRO -D__SAML21J18B__ -DSYSTICK_MODE -DUSB_DEVICE_LPM_SUPPORT -DUDD_ENABLE -DEXTINT_CALLBACK_MODE=true</armgcc.preprocessingassembler.general.AssemblerFlags>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../src/ASF/common/boards</Value>
@@ -481,6 +569,16 @@
       <Value>../src/config</Value>
       <Value>../src/ASF/common2/services/delay</Value>
       <Value>../src/ASF/common2/services/delay/sam0</Value>
+      <Value>../src/ASF/common/services/sleepmgr</Value>
+      <Value>../src/ASF/common/services/usb</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc</Value>
+      <Value>../src/ASF/common/services/usb/class/cdc/device</Value>
+      <Value>../src/ASF/common/services/usb/udc</Value>
+      <Value>../src/ASF/sam0/drivers/extint</Value>
+      <Value>../src/ASF/sam0/drivers/extint/extint_sam_l_c</Value>
+      <Value>../src/ASF/sam0/drivers/usb</Value>
+      <Value>../src/ASF/sam0/drivers/usb/usb_sam_l</Value>
+      <Value>../src/ASF/sam0/drivers/usb/stack_interface</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
   <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
@@ -496,12 +594,22 @@
     <Folder Include="src\ASF\common2\services\delay\sam0\" />
     <Folder Include="src\ASF\common\" />
     <Folder Include="src\ASF\common\boards\" />
+    <Folder Include="src\ASF\common\services\" />
+    <Folder Include="src\ASF\common\services\sleepmgr\" />
+    <Folder Include="src\ASF\common\services\sleepmgr\saml\" />
+    <Folder Include="src\ASF\common\services\usb\" />
+    <Folder Include="src\ASF\common\services\usb\class\" />
+    <Folder Include="src\ASF\common\services\usb\class\cdc\" />
+    <Folder Include="src\ASF\common\services\usb\class\cdc\device\" />
+    <Folder Include="src\ASF\common\services\usb\udc\" />
     <Folder Include="src\ASF\common\utils\" />
     <Folder Include="src\ASF\common\utils\interrupt\" />
     <Folder Include="src\ASF\sam0\" />
     <Folder Include="src\ASF\sam0\boards\" />
     <Folder Include="src\ASF\sam0\boards\saml21_xplained_pro_b\" />
     <Folder Include="src\ASF\sam0\drivers\" />
+    <Folder Include="src\ASF\sam0\drivers\extint\" />
+    <Folder Include="src\ASF\sam0\drivers\extint\extint_sam_l_c\" />
     <Folder Include="src\ASF\sam0\drivers\port\" />
     <Folder Include="src\ASF\sam0\drivers\port\quick_start\" />
     <Folder Include="src\ASF\sam0\drivers\system\" />
@@ -515,6 +623,9 @@
     <Folder Include="src\ASF\sam0\drivers\system\power\power_sam_l\" />
     <Folder Include="src\ASF\sam0\drivers\system\reset\" />
     <Folder Include="src\ASF\sam0\drivers\system\reset\reset_sam_l\" />
+    <Folder Include="src\ASF\sam0\drivers\usb\" />
+    <Folder Include="src\ASF\sam0\drivers\usb\stack_interface\" />
+    <Folder Include="src\ASF\sam0\drivers\usb\usb_sam_l\" />
     <Folder Include="src\ASF\sam0\utils\" />
     <Folder Include="src\ASF\sam0\utils\cmsis\" />
     <Folder Include="src\ASF\sam0\utils\cmsis\saml21\" />
@@ -540,6 +651,12 @@
     <Folder Include="src\config\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="atmel_devices_cdc.cat">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="atmel_devices_cdc.inf">
+      <SubType>compile</SubType>
+    </None>
     <None Include="src\ASF\common2\services\delay\sam0\systick_counter.h">
       <SubType>compile</SubType>
     </None>
@@ -885,10 +1002,67 @@
     <None Include="src\ASF\common\utils\interrupt.h">
       <SubType>compile</SubType>
     </None>
+    <Compile Include="src\ASF\common\services\sleepmgr\saml\sleepmgr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\sleepmgr\sleepmgr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\sleepmgr\saml\sleepmgr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\usb_atmel.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\usb_protocol.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\class\cdc\usb_protocol_cdc.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\usb\class\cdc\device\udi_cdc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\usb\class\cdc\device\udi_cdc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\class\cdc\device\udi_cdc_conf.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\common\services\usb\class\cdc\device\udi_cdc_desc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\common\services\usb\udc\udc.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\common\services\usb\udc\udc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\udc\udd.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\udc\udc_desc.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\ASF\common\services\usb\udc\udi.h">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="src\ASF\common\utils\interrupt\interrupt_sam_nvic.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\boards\saml21_xplained_pro_b\board_init.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam0\drivers\extint\extint.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\extint\extint_callback.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam0\drivers\extint\extint_callback.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\extint\extint_sam_l_c\extint.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\ASF\sam0\drivers\port\port.c">
@@ -957,6 +1131,21 @@
     <None Include="src\ASF\sam0\utils\cmsis\saml21\include_b\pio\saml21g16b.h">
       <SubType>compile</SubType>
     </None>
+    <None Include="src\ASF\sam0\drivers\usb\usb.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\usb\stack_interface\usb_device_udd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\ASF\sam0\drivers\usb\stack_interface\usb_dual.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="src\ASF\sam0\drivers\usb\stack_interface\usb_dual.h">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="src\ASF\sam0\drivers\usb\usb_sam_l\usb.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\ASF\sam0\utils\cmsis\saml21\source\gcc\startup_saml21.c">
       <SubType>compile</SubType>
     </Compile>
@@ -966,6 +1155,15 @@
     <Compile Include="src\ASF\sam0\utils\syscalls\gcc\syscalls.c">
       <SubType>compile</SubType>
     </Compile>
+    <None Include="src\config\conf_sleepmgr.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_usb.h">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="src\config\conf_extint.h">
+      <SubType>compile</SubType>
+    </None>
     <Compile Include="src\main.c">
       <SubType>compile</SubType>
     </Compile>

@@ -34,6 +34,10 @@
 #include <asf.h>
 #include <stdbool.h>
 
+#ifndef F_CPU
+#define F_CPU   sysclk_get_cpu_hz();
+#endif
+
 // LED Definitions
 #define LED_R1_PIN      PIN_PA07
 #define LED_R1_PORT     PORTA
@@ -64,6 +68,24 @@
 #define PB_PIN      PIN_PA27
 #define PB_PORT     PORTA
 
+static bool my_flag_autorize_cdc_transfert = false;
+bool my_callback_cdc_enable(void)
+{
+    my_flag_autorize_cdc_transfert = true;
+    return true;
+}
+void my_callback_cdc_disable(void)
+{
+    my_flag_autorize_cdc_transfert = false;
+}
+void task(void)
+{
+    if (my_flag_autorize_cdc_transfert) {
+        udi_cdc_putc('A');
+        udi_cdc_getc();
+    }
+}
+
 int main (void)
 {
     // main startup stuff
@@ -80,7 +102,7 @@ int main (void)
     // init structs
     led_pin_conf.direction  = PORT_PIN_DIR_OUTPUT;
     pb_pin_conf.direction = PORT_PIN_DIR_INPUT;
-    pb_pin_conf.input_pull = PORT_PIN_PULL_NONE;
+    pb_pin_conf.input_pull = PORT_PIN_PULL_UP;
     
     // output inits
     port_pin_set_config(LED_R1_PIN, &led_pin_conf);
@@ -112,16 +134,17 @@ int main (void)
     port_pin_set_output_level(LED_G5_PIN, false);    		
     port_pin_set_output_level(LED_R6_PIN, false);
     port_pin_set_output_level(LED_G6_PIN, true);
+    
+    delay_init();
+    
+    //udc_start();
         
 	while(1)
-    {    
-        // remember pb state and get new pb state
+    {
         pb_state_1 = pb_state;
-        pb_state = !port_pin_get_input_level(PB_PIN);        
-        
-        // check if input is pressed and released, then toggle LED output values
-        if((pb_state == false) && (pb_state_1 == true))
-        {
+        pb_state = !port_pin_get_input_level(PB_PIN);
+        if((pb_state == true) && (pb_state_1 == false))
+        {        
             // toggle outputs
             port_pin_toggle_output_level(LED_R1_PIN);
             port_pin_toggle_output_level(LED_G1_PIN);
@@ -135,6 +158,6 @@ int main (void)
             port_pin_toggle_output_level(LED_G5_PIN);
             port_pin_toggle_output_level(LED_R6_PIN);
             port_pin_toggle_output_level(LED_G6_PIN);
-        }            
+        }       
 	}
 }

@@ -123,15 +123,37 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam0/drivers/system/clock/clock.h \
  ../src/ASF/sam0/drivers/system/clock/gclk.h \
  ../src/ASF/sam0/drivers/system/clock/clock_saml21/clock_feature.h \
+ ../src/ASF/sam0/drivers/extint/extint.h \
+ ../src/ASF/sam0/drivers/system/pinmux/pinmux.h \
+ ../src/ASF/sam0/drivers/extint/extint_callback.h \
+ ../src/ASF/sam0/drivers/extint/extint_callback.h \
  ../src/ASF/common/boards/board.h \
  ../src/ASF/sam0/boards/saml21_xplained_pro_b/saml21_xplained_pro.h \
  ../src/config/conf_board.h ../src/ASF/sam0/drivers/port/port.h \
- ../src/ASF/sam0/drivers/system/pinmux/pinmux.h \
+ ../src/ASF/sam0/drivers/usb/stack_interface/usb_dual.h \
  ../src/ASF/sam0/drivers/system/system.h \
  ../src/ASF/sam0/drivers/system/power/power_sam_l/power.h \
  ../src/ASF/sam0/drivers/system/reset/reset_sam_l/reset.h \
  ../src/ASF/sam0/drivers/system/interrupt/system_interrupt.h \
- ../src/ASF/sam0/drivers/system/interrupt/system_interrupt_saml21/system_interrupt_features.h
+ ../src/ASF/sam0/drivers/system/interrupt/system_interrupt_saml21/system_interrupt_features.h \
+ ../src/ASF/common/services/sleepmgr/saml/sleepmgr.h \
+ ../src/config/conf_sleepmgr.h \
+ ../src/ASF/common/services/sleepmgr/sleepmgr.h \
+ ../src/ASF/common/services/sleepmgr/saml/sleepmgr.h \
+ ../src/ASF/sam0/drivers/usb/usb.h \
+ ../src/ASF/common/services/usb/class/cdc/usb_protocol_cdc.h \
+ ../src/ASF/common/services/usb/class/cdc/device/udi_cdc.h \
+ ../src/config/conf_usb.h \
+ ../src/ASF/common/services/usb/class/cdc/device/udi_cdc_conf.h \
+ ../src/ASF/common/services/usb/usb_protocol.h \
+ ../src/ASF/common/services/usb/usb_atmel.h \
+ ../src/ASF/common/services/usb/udc/udd.h \
+ ../src/ASF/common/services/usb/udc/udc_desc.h \
+ ../src/ASF/common/services/usb/udc/udi.h \
+ ../src/ASF/common/services/usb/udc/udc_desc.h \
+ ../src/ASF/common/services/usb/udc/udi.h \
+ ../src/ASF/common/services/usb/udc/udc.h \
+ ../src/ASF/common/services/usb/udc/udd.h
 
 ../src/asf.h:
 
@@ -385,6 +407,14 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/sam0/drivers/system/clock/clock_saml21/clock_feature.h:
 
+../src/ASF/sam0/drivers/extint/extint.h:
+
+../src/ASF/sam0/drivers/system/pinmux/pinmux.h:
+
+../src/ASF/sam0/drivers/extint/extint_callback.h:
+
+../src/ASF/sam0/drivers/extint/extint_callback.h:
+
 ../src/ASF/common/boards/board.h:
 
 ../src/ASF/sam0/boards/saml21_xplained_pro_b/saml21_xplained_pro.h:
@@ -393,7 +423,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/sam0/drivers/port/port.h:
 
-../src/ASF/sam0/drivers/system/pinmux/pinmux.h:
+../src/ASF/sam0/drivers/usb/stack_interface/usb_dual.h:
 
 ../src/ASF/sam0/drivers/system/system.h:
 
@@ -404,3 +434,39 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/ASF/sam0/drivers/system/interrupt/system_interrupt.h:
 
 ../src/ASF/sam0/drivers/system/interrupt/system_interrupt_saml21/system_interrupt_features.h:
+
+../src/ASF/common/services/sleepmgr/saml/sleepmgr.h:
+
+../src/config/conf_sleepmgr.h:
+
+../src/ASF/common/services/sleepmgr/sleepmgr.h:
+
+../src/ASF/common/services/sleepmgr/saml/sleepmgr.h:
+
+../src/ASF/sam0/drivers/usb/usb.h:
+
+../src/ASF/common/services/usb/class/cdc/usb_protocol_cdc.h:
+
+../src/ASF/common/services/usb/class/cdc/device/udi_cdc.h:
+
+../src/config/conf_usb.h:
+
+../src/ASF/common/services/usb/class/cdc/device/udi_cdc_conf.h:
+
+../src/ASF/common/services/usb/usb_protocol.h:
+
+../src/ASF/common/services/usb/usb_atmel.h:
+
+../src/ASF/common/services/usb/udc/udd.h:
+
+../src/ASF/common/services/usb/udc/udc_desc.h:
+
+../src/ASF/common/services/usb/udc/udi.h:
+
+../src/ASF/common/services/usb/udc/udc_desc.h:
+
+../src/ASF/common/services/usb/udc/udi.h:
+
+../src/ASF/common/services/usb/udc/udc.h:
+
+../src/ASF/common/services/usb/udc/udd.h:
