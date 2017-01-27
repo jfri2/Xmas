@@ -32,9 +32,16 @@
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 
+
 #include <asf.h>
+
 #include "snowflake_board.h"
-#include "snowflake_init.h"
+#include "snowflake_common.h"
+#include "audio.h"
+#include "flash.h"
+#include "led.h"
+#include "pb.h"
+#include "usb.h"
 
 void snowflake_init(void);
 
@@ -50,10 +57,10 @@ int main(void)
 }
 
 void snowflake_init()
-{
-    led_init(void);
-    pb_init(void);
-    flash_init(void);
-    usb_init(void);
-    amp_init(void);
+{    
+    led_init();
+    pb_init();
+    flash_init();
+    usb_init();
+    amp_init();
 }

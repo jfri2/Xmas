@@ -14,6 +14,6 @@
 #include "snowflake_board.h"
 #include "snowflake_common.h"
 
-void flash_init();
+void flash_init(void);
 
 #endif /* _FLASH_H */

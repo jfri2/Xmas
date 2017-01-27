@@ -13,6 +13,7 @@
 #include "snowflake_board.h"
 #include "snowflake_common.h"
 
-void snowflake_pb_init();
+
+void pb_init(void);
 
 #endif /* _PB_H */

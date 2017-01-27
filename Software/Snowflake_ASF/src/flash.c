@@ -13,8 +13,10 @@
 * @brief @todo
 * @return void
 */
-void flash_init()
+void flash_init(void)
 {
+    struct port_config gpio_output   = { .direction = PORT_PIN_DIR_OUTPUT };  
+    
     // Configure flash discretes as outputs
     port_pin_set_config(FLASH_CS_PIN, &gpio_output);
     port_pin_set_config(FLASH_HOLD_PIN, &gpio_output);

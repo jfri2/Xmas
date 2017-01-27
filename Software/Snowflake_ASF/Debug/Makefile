@@ -83,7 +83,11 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../src/snowflake_init.c \
+../src/audio.c \
+../src/flash.c \
+../src/led.c \
+../src/pb.c \
+../src/usb.c \
 ../src/ASF/common/utils/interrupt/interrupt_sam_nvic.c \
 ../src/ASF/sam0/boards/saml21_xplained_pro_b/board_init.c \
 ../src/ASF/sam0/drivers/port/port.c \
@@ -105,7 +109,11 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-snowflake_init.o \
+audio.o \
+flash.o \
+led.o \
+pb.o \
+usb.o \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o \
 src/ASF/sam0/boards/saml21_xplained_pro_b/board_init.o \
 src/ASF/sam0/drivers/port/port.o \
@@ -120,7 +128,11 @@ src/ASF/sam0/utils/syscalls/gcc/syscalls.o \
 src/main.o
 
 OBJS_AS_ARGS +=  \
-snowflake_init.o \
+audio.o \
+flash.o \
+led.o \
+pb.o \
+usb.o \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.o \
 src/ASF/sam0/boards/saml21_xplained_pro_b/board_init.o \
 src/ASF/sam0/drivers/port/port.o \
@@ -135,7 +147,11 @@ src/ASF/sam0/utils/syscalls/gcc/syscalls.o \
 src/main.o
 
 C_DEPS +=  \
-snowflake_init.d \
+audio.d \
+flash.d \
+led.d \
+pb.d \
+usb.d \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.d \
 src/ASF/sam0/boards/saml21_xplained_pro_b/board_init.d \
 src/ASF/sam0/drivers/port/port.d \
@@ -150,7 +166,11 @@ src/ASF/sam0/utils/syscalls/gcc/syscalls.d \
 src/main.d
 
 C_DEPS_AS_ARGS +=  \
-snowflake_init.d \
+audio.d \
+flash.d \
+led.d \
+pb.d \
+usb.d \
 src/ASF/common/utils/interrupt/interrupt_sam_nvic.d \
 src/ASF/sam0/boards/saml21_xplained_pro_b/board_init.d \
 src/ASF/sam0/drivers/port/port.d \
@@ -179,6 +199,14 @@ LINKER_SCRIPT_DEP+=  \
 
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
+
+
 
 
 

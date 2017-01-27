@@ -13,8 +13,10 @@
 * @brief todo
 * @return void
 */
-void led_init()
-{
+void led_init(void)
+{    
+    struct port_config gpio_output   = { .direction = PORT_PIN_DIR_OUTPUT };
+    
     // Configure LEDs as outputs
     port_pin_set_config(LED_R1_PIN, &gpio_output);
     port_pin_set_config(LED_G1_PIN, &gpio_output);

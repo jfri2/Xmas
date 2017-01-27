@@ -9,6 +9,7 @@
 #ifndef _SNOWFLAKE_COMMON_H
 #define _SNOWFLAKE_COMMON_H
 
-// @todo 
+#include <asf.h>
+                                            
 
 #endif /* _SNOWFLAKE_COMMON_H */

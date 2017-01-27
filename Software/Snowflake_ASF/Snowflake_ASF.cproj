@@ -506,17 +506,53 @@
     <Folder Include="src\config\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\audio.c">
+      <SubType>compile</SubType>
+      <Link>audio.c</Link>
+    </Compile>
+    <Compile Include="src\audio.h">
+      <SubType>compile</SubType>
+      <Link>audio.h</Link>
+    </Compile>
+    <Compile Include="src\flash.c">
+      <SubType>compile</SubType>
+      <Link>flash.c</Link>
+    </Compile>
+    <Compile Include="src\flash.h">
+      <SubType>compile</SubType>
+      <Link>flash.h</Link>
+    </Compile>
+    <Compile Include="src\led.c">
+      <SubType>compile</SubType>
+      <Link>led.c</Link>
+    </Compile>
+    <Compile Include="src\led.h">
+      <SubType>compile</SubType>
+      <Link>led.h</Link>
+    </Compile>
+    <Compile Include="src\pb.c">
+      <SubType>compile</SubType>
+      <Link>pb.c</Link>
+    </Compile>
+    <Compile Include="src\pb.h">
+      <SubType>compile</SubType>
+      <Link>pb.h</Link>
+    </Compile>
     <Compile Include="src\snowflake_board.h">
       <SubType>compile</SubType>
       <Link>snowflake_board.h</Link>
     </Compile>
-    <Compile Include="src\snowflake_init.c">
+    <Compile Include="src\snowflake_common.h">
       <SubType>compile</SubType>
-      <Link>snowflake_init.c</Link>
+      <Link>snowflake_common.h</Link>
     </Compile>
-    <Compile Include="src\snowflake_init.h">
+    <Compile Include="src\usb.c">
       <SubType>compile</SubType>
-      <Link>snowflake_init.h</Link>
+      <Link>usb.c</Link>
+    </Compile>
+    <Compile Include="src\usb.h">
+      <SubType>compile</SubType>
+      <Link>usb.h</Link>
     </Compile>
     <None Include="src\asf.h">
       <SubType>compile</SubType>

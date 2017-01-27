@@ -13,8 +13,11 @@
 * @brief @todo
 * @return void
 */
-void snowflake_amp_init()
+void amp_init(void)
 {
+    
+    struct port_config gpio_output   = { .direction = PORT_PIN_DIR_OUTPUT };
+   
     // Configure amplifier & audio related discretes as outputs
     port_pin_set_config(AMP_SHDN_PIN, &gpio_output);
     port_pin_set_config(VREF_PIN, &gpio_output);

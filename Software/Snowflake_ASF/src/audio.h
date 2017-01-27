@@ -14,6 +14,8 @@
 #include "snowflake_board.h"
 #include "snowflake_common.h"
 
-void snowflake_amp_init();
+
+
+void amp_init(void);
 
 #endif /* _AUDIO_H */

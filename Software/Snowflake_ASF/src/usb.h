@@ -13,6 +13,7 @@
 #include "snowflake_board.h"
 #include "snowflake_common.h"
 
-void usb_init();
+
+void usb_init(void);
 
 #endif /* _USB_H */

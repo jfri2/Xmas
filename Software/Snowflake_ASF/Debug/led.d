@@ -1,4 +1,4 @@
-src/main.d src/main.o: ../src/main.c ../src/asf.h \
+led.d led.o: ../src/led.c ../src/led.h ../src/asf.h \
  ../src/ASF/sam0/utils/compiler.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\5.3.1\include\stddef.h \
  ../src/ASF/common/utils/parts.h ../src/ASF/sam0/utils/status_codes.h \
@@ -130,8 +130,9 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/sam0/drivers/system/reset/reset_sam_l/reset.h \
  ../src/ASF/sam0/drivers/system/interrupt/system_interrupt.h \
  ../src/ASF/sam0/drivers/system/interrupt/system_interrupt_saml21/system_interrupt_features.h \
- ../src/snowflake_board.h ../src/snowflake_common.h ../src/audio.h \
- ../src/flash.h ../src/led.h ../src/pb.h ../src/usb.h
+ ../src/snowflake_board.h ../src/snowflake_common.h
+
+../src/led.h:
 
 ../src/asf.h:
 
@@ -404,13 +405,3 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/snowflake_board.h:
 
 ../src/snowflake_common.h:
-
-../src/audio.h:
-
-../src/flash.h:
-
-../src/led.h:
-
-../src/pb.h:
-
-../src/usb.h:

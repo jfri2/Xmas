@@ -14,6 +14,7 @@
 #include "snowflake_board.h"
 #include "snowflake_common.h"
 
-void led_init();
+
+void led_init(void);
 
 #endif /* _LED_H */

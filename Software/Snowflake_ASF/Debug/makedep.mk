@@ -2,7 +2,15 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-src\snowflake_init.c
+src\audio.c
+
+src\flash.c
+
+src\led.c
+
+src\pb.c
+
+src\usb.c
 
 src\ASF\common\utils\interrupt\interrupt_sam_nvic.c
 
