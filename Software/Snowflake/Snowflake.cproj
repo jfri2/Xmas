@@ -161,6 +161,14 @@
       <SubType>compile</SubType>
       <Link>board.h</Link>
     </Compile>
+    <Compile Include="common.c">
+      <SubType>compile</SubType>
+      <Link>common.c</Link>
+    </Compile>
+    <Compile Include="common.h">
+      <SubType>compile</SubType>
+      <Link>common.h</Link>
+    </Compile>
     <Compile Include="Device_Startup\startup_saml21.c">
       <SubType>compile</SubType>
     </Compile>
@@ -174,6 +182,46 @@
     <Compile Include="Drivers\gpio.h">
       <SubType>compile</SubType>
       <Link>gpio.h</Link>
+    </Compile>
+    <Compile Include="Lib\audio.c">
+      <SubType>compile</SubType>
+      <Link>audio.c</Link>
+    </Compile>
+    <Compile Include="Lib\audio.h">
+      <SubType>compile</SubType>
+      <Link>audio.h</Link>
+    </Compile>
+    <Compile Include="Lib\flash.c">
+      <SubType>compile</SubType>
+      <Link>flash.c</Link>
+    </Compile>
+    <Compile Include="Lib\flash.h">
+      <SubType>compile</SubType>
+      <Link>flash.h</Link>
+    </Compile>
+    <Compile Include="Lib\led.c">
+      <SubType>compile</SubType>
+      <Link>led.c</Link>
+    </Compile>
+    <Compile Include="Lib\led.h">
+      <SubType>compile</SubType>
+      <Link>led.h</Link>
+    </Compile>
+    <Compile Include="Lib\pb.c">
+      <SubType>compile</SubType>
+      <Link>pb.c</Link>
+    </Compile>
+    <Compile Include="Lib\pb.h">
+      <SubType>compile</SubType>
+      <Link>pb.h</Link>
+    </Compile>
+    <Compile Include="Lib\usb_app.c">
+      <SubType>compile</SubType>
+      <Link>usb_app.c</Link>
+    </Compile>
+    <Compile Include="Lib\usb_app.h">
+      <SubType>compile</SubType>
+      <Link>usb_app.h</Link>
     </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>

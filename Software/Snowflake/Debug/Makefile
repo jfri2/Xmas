@@ -38,9 +38,15 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../common.c \
 ../Device_Startup/startup_saml21.c \
 ../Device_Startup/system_saml21.c \
 ../Drivers/gpio.c \
+../Lib/audio.c \
+../Lib/flash.c \
+../Lib/led.c \
+../Lib/pb.c \
+../Lib/usb_app.c \
 ../main.c
 
 
@@ -51,27 +57,51 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+common.o \
 Device_Startup/startup_saml21.o \
 Device_Startup/system_saml21.o \
 gpio.o \
+audio.o \
+flash.o \
+led.o \
+pb.o \
+usb_app.o \
 main.o
 
 OBJS_AS_ARGS +=  \
+common.o \
 Device_Startup/startup_saml21.o \
 Device_Startup/system_saml21.o \
 gpio.o \
+audio.o \
+flash.o \
+led.o \
+pb.o \
+usb_app.o \
 main.o
 
 C_DEPS +=  \
+common.d \
 Device_Startup/startup_saml21.d \
 Device_Startup/system_saml21.d \
 gpio.d \
+audio.d \
+flash.d \
+led.d \
+pb.d \
+usb_app.d \
 main.d
 
 C_DEPS_AS_ARGS +=  \
+common.d \
 Device_Startup/startup_saml21.d \
 Device_Startup/system_saml21.d \
 gpio.d \
+audio.d \
+flash.d \
+led.d \
+pb.d \
+usb_app.d \
 main.d
 
 OUTPUT_FILE_PATH +=Snowflake.elf
@@ -99,6 +129,25 @@ LINKER_SCRIPT_DEP+=  \
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+./%.o: .././%.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 5.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAML21J18B__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 Device_Startup/%.o: ../Device_Startup/%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 5.3.1
@@ -113,7 +162,7 @@ Device_Startup/%.o: ../Device_Startup/%.c
 	@echo Finished building: $<
 	
 
-./%.o: .././%.c
+./%.o: ../Lib/%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 5.3.1
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAML21J18B__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
