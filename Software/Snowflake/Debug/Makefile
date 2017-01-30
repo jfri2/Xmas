@@ -40,6 +40,7 @@ SUBDIRS :=  \
 C_SRCS +=  \
 ../Device_Startup/startup_saml21.c \
 ../Device_Startup/system_saml21.c \
+../Drivers/gpio.c \
 ../main.c
 
 
@@ -52,21 +53,25 @@ ASM_SRCS +=
 OBJS +=  \
 Device_Startup/startup_saml21.o \
 Device_Startup/system_saml21.o \
+gpio.o \
 main.o
 
 OBJS_AS_ARGS +=  \
 Device_Startup/startup_saml21.o \
 Device_Startup/system_saml21.o \
+gpio.o \
 main.o
 
 C_DEPS +=  \
 Device_Startup/startup_saml21.d \
 Device_Startup/system_saml21.d \
+gpio.d \
 main.d
 
 C_DEPS_AS_ARGS +=  \
 Device_Startup/startup_saml21.d \
 Device_Startup/system_saml21.d \
+gpio.d \
 main.d
 
 OUTPUT_FILE_PATH +=Snowflake.elf
@@ -92,7 +97,16 @@ LINKER_SCRIPT_DEP+=  \
 
 
 
+
+
 Device_Startup/%.o: ../Device_Startup/%.c
+	@echo Building file: $<
+	@echo Invoking: ARM/GNU C Compiler : 5.3.1
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAML21J18B__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./%.o: ../Drivers/%.c
 	@echo Building file: $<
 	@echo Invoking: ARM/GNU C Compiler : 5.3.1
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\arm\arm-gnu-toolchain\bin\arm-none-eabi-gcc.exe$(QUOTE)  -x c -mthumb -D__SAML21J18B__ -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include" -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\arm\cmsis\4.2.0\CMSIS\Include"  -O1 -ffunction-sections -mlong-calls -g3 -Wall -mcpu=cortex-m0plus -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

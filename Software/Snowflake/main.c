@@ -28,50 +28,57 @@
 #include "board.h"
 
 
-
 // State Machine Definitions
 typedef enum 
 {
-    IDLE = 0, 
+    IDLE, 
     PLAY,
     PROG, 
     SLEEP
 } eTopState;   // Top state machine states
+    
+volatile eTopState top_state = IDLE;  
+  
+sGpioPinConfig *led_cfg = &(sGpioPinConfig)
+{
+    .pin_type = OUTPUT,
+    .default_drive = LOW
+};    
 
-// enum idle_state_t {};                       // Idle sub-state machine states
-// enum play_state_t {};                       // Play sub-state machine states
-// enum prog_state_t {};                       // Prog sub-state machine states
-// enum sleep_state_t {};                      // Sleep sub-state machine states    
-    
-volatile eTopState top_state = IDLE;
-    
 
 int main(void)
 {
     /* Initialize the system */
     SystemInit();
+    gpio_pin_config(LED_R1_PIN, led_cfg);
+    //gpio_set_pin_level(LED_R1_PIN, HIGH);
 
     /* Application Loop */
-    while(1) 
+    while (1) 
     {
-        // Top level state machine
-        switch(top_state)
-        {
-            case IDLE:
-                // Implement Idle state
-            break;
-            
-            case PLAY:
-                // Implement Play state
-            break;
-            
-            case PROG:
-                // Implement Program state
-            break;
-            
-            case SLEEP:
-                // Implement Sleep state
-            break;
-        }            
+        
+        
+        
+        
+        
+//         // Top level state machine
+//         switch (top_state)
+//         {
+//             case IDLE:
+//                 
+//             break;
+//             
+//             case PLAY:
+//                 
+//             break;
+//             
+//             case PROG:
+//                 
+//             break;
+//             
+//             case SLEEP:
+//                 
+//             break;
+//         }            
     }
 }

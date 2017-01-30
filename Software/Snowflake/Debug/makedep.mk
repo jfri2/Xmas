@@ -6,5 +6,7 @@ Device_Startup\startup_saml21.c
 
 Device_Startup\system_saml21.c
 
+Drivers\gpio.c
+
 main.c
 

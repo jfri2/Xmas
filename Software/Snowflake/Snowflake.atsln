@@ -6,16 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "Snowflake", "Snowflake.cproj", "{DCE6C7E3-EE26-4D79-826B-08594B9AD897}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B39CEEF8-B620-4724-A12B-5440F24B84AD}"
-	ProjectSection(SolutionItems) = preProject
-		Drivers\clock.c = Drivers\clock.c
-		Drivers\clock.h = Drivers\clock.h
-		Drivers\dac.c = Drivers\dac.c
-		Drivers\dac.h = Drivers\dac.h
-		Drivers\gpio.c = Drivers\gpio.c
-		Drivers\gpio.h = Drivers\gpio.h
-		Drivers\timer.c = Drivers\timer.c
-		Drivers\timer.h = Drivers\timer.h
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

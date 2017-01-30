@@ -19,57 +19,69 @@ extern "C"
 #include <stdbool.h>
 
 ///////////////////////////////////////////////////////////////////////////////
-// Common GPIO Parameters
+// GPIO Definitions and Enums for managing port differences
 ///////////////////////////////////////////////////////////////////////////////
-// typdef enum
-// {
-// 	
-// } gpio_pin_t
+#define GPIO_PORT_PIN_OFFSET    32
+
+typedef enum
+{
+    GPIO_PORT_A,
+    GPIO_PORT_B    
+} eGpioPortLetter;
 
 ///////////////////////////////////////////////////////////////////////////////
-// GPIO Pin Input Configuration Parameters
+// GPIO Pin Configuration Enums
 ///////////////////////////////////////////////////////////////////////////////
+typedef enum
+{
+	INPUT,
+	OUTPUT,
+	PERIPH
+} eGpioType;
+
 typedef enum
 {
 	HIGHZ,
 	PULLUP
 } eGpioPull;
 
-typedef struct
-{
-	uint8_t			pin_number;
-	eGpioPull		pull;
-} sGpioInput;
-
-///////////////////////////////////////////////////////////////////////////////
-// GPIO Pin Output Configuration Parameters
-///////////////////////////////////////////////////////////////////////////////
 typedef enum
 {
-	NORMAL,
-	STRONG
-} eGpioDrive;
+	LOW,
+	HIGH
+} eGpioLevel;
 
+typedef enum
+{
+	PERIPH_A = 0,
+	PERIPH_B,
+	PERIPH_C,
+	PERIPH_D,
+	PERIPH_E,
+	PERIPH_F,
+	PERIPH_G,
+	PERIPH_H,
+	PERIPH_I
+} eGpioPeriph;
+
+///////////////////////////////////////////////////////////////////////////////
+// GPIO Pin Configuration Struct
+///////////////////////////////////////////////////////////////////////////////
 typedef struct
 {
-	uint8_t			pin_number;
-	eGpioDrive	    drive_strength;
-} sGpioOutput;
+	eGpioType		pin_type;
+	eGpioLevel		default_drive;
+	eGpioPull		pull;
+    eGpioPeriph     periph_function;
+} sGpioPinConfig;
 
 ///////////////////////////////////////////////////////////////////////////////
-// GPIO Pin Peripheral Configuration Parameters
+// GPIO Functions
 ///////////////////////////////////////////////////////////////////////////////
-typedef struct 
-{
-	uint8_t         pin_number;  
-} sGpioPeripheral;
-
-///////////////////////////////////////////////////////////////////////////////
-// GPIO Function Prototypes
-///////////////////////////////////////////////////////////////////////////////
-void gpio_config_input(sGpioInput *);
-void gpio_config_output(sGpioOutput *);
-void gpio_config_peripheral(sGpioPeripheral *);
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config);
+void gpio_set_pin_level(uint32_t pin, eGpioLevel level);
+void gpio_toggle_pin_level(uint32_t pin);
+eGpioLevel gpio_get_pin_level(uint32_t pin);
 
 #ifdef __cplusplus
 }

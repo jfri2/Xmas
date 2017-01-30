@@ -157,11 +157,23 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="board.h">
+      <SubType>compile</SubType>
+      <Link>board.h</Link>
+    </Compile>
     <Compile Include="Device_Startup\startup_saml21.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Device_Startup\system_saml21.c">
       <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Drivers\gpio.c">
+      <SubType>compile</SubType>
+      <Link>gpio.c</Link>
+    </Compile>
+    <Compile Include="Drivers\gpio.h">
+      <SubType>compile</SubType>
+      <Link>gpio.h</Link>
     </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>

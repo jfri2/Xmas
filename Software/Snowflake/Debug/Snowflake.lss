@@ -3,43 +3,43 @@ Snowflake.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000388  00000000  00000000  00010000  2**2
+  0 .text         0000046c  00000000  00000000  00010000  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .relocate     00000430  20000000  00000388  00020000  2**3
+  1 .relocate     00000438  20000000  0000046c  00020000  2**3
                   CONTENTS, ALLOC, LOAD, DATA
-  2 .lpram        00000000  30000000  30000000  00020430  2**0
+  2 .lpram        00000000  30000000  30000000  00020438  2**0
                   CONTENTS
-  3 .bss          00000020  20000430  000007b8  00020430  2**2
+  3 .bss          0000001c  20000438  000008a4  00020438  2**2
                   ALLOC
-  4 .stack        00002000  20000450  000007d8  00020430  2**0
+  4 .stack        00002004  20000454  000008c0  00020438  2**0
                   ALLOC
-  5 .ARM.attributes 00000028  00000000  00000000  00020430  2**0
+  5 .ARM.attributes 00000028  00000000  00000000  00020438  2**0
                   CONTENTS, READONLY
-  6 .comment      00000059  00000000  00000000  00020458  2**0
+  6 .comment      00000059  00000000  00000000  00020460  2**0
                   CONTENTS, READONLY
-  7 .debug_info   00000b9f  00000000  00000000  000204b1  2**0
+  7 .debug_info   0000100a  00000000  00000000  000204b9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_abbrev 000002c0  00000000  00000000  00021050  2**0
+  8 .debug_abbrev 00000416  00000000  00000000  000214c3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_loc    00000040  00000000  00000000  00021310  2**0
+  9 .debug_loc    000006d8  00000000  00000000  000218d9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_aranges 00000070  00000000  00000000  00021350  2**0
+ 10 .debug_aranges 000000a8  00000000  00000000  00021fb1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000040  00000000  00000000  000213c0  2**0
+ 11 .debug_ranges 00000068  00000000  00000000  00022059  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_macro  000140ce  00000000  00000000  00021400  2**0
+ 12 .debug_macro  000145d9  00000000  00000000  000220c1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_line   000015ff  00000000  00000000  000354ce  2**0
+ 13 .debug_line   00001de1  00000000  00000000  0003669a  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_str    0007e540  00000000  00000000  00036acd  2**0
+ 14 .debug_str    0007eaf8  00000000  00000000  0003847b  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_frame  000001a0  00000000  00000000  000b5010  2**2
+ 15 .debug_frame  000001f8  00000000  00000000  000b6f74  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
 
 00000000 <_sfixed>:
-   0:	20002450 	.word	0x20002450
+   0:	20002458 	.word	0x20002458
    4:	00000119 	.word	0x00000119
    8:	00000115 	.word	0x00000115
    c:	00000115 	.word	0x00000115
@@ -93,9 +93,9 @@ Disassembly of section .text:
   ca:	2301      	movs	r3, #1
   cc:	7023      	strb	r3, [r4, #0]
   ce:	bd10      	pop	{r4, pc}
-  d0:	20000430 	.word	0x20000430
+  d0:	20000438 	.word	0x20000438
   d4:	00000000 	.word	0x00000000
-  d8:	00000388 	.word	0x00000388
+  d8:	0000046c 	.word	0x0000046c
 
 000000dc <frame_dummy>:
   dc:	4b08      	ldr	r3, [pc, #32]	; (100 <frame_dummy+0x24>)
@@ -117,9 +117,9 @@ Disassembly of section .text:
   fc:	4798      	blx	r3
   fe:	e7f9      	b.n	f4 <frame_dummy+0x18>
  100:	00000000 	.word	0x00000000
- 104:	20000434 	.word	0x20000434
- 108:	00000388 	.word	0x00000388
- 10c:	00000388 	.word	0x00000388
+ 104:	2000043c 	.word	0x2000043c
+ 108:	0000046c 	.word	0x0000046c
+ 10c:	0000046c 	.word	0x0000046c
  110:	00000000 	.word	0x00000000
 
 00000114 <Dummy_Handler>:
@@ -254,17 +254,17 @@ void Reset_Handler(void)
  18c:	4798      	blx	r3
  18e:	e7fe      	b.n	18e <Reset_Handler+0x76>
  190:	20000000 	.word	0x20000000
- 194:	00000388 	.word	0x00000388
- 198:	20000430 	.word	0x20000430
- 19c:	20000450 	.word	0x20000450
- 1a0:	20000430 	.word	0x20000430
+ 194:	0000046c 	.word	0x0000046c
+ 198:	20000438 	.word	0x20000438
+ 19c:	20000454 	.word	0x20000454
+ 1a0:	20000438 	.word	0x20000438
  1a4:	20000004 	.word	0x20000004
- 1a8:	20000434 	.word	0x20000434
+ 1a8:	2000043c 	.word	0x2000043c
  1ac:	e000ed00 	.word	0xe000ed00
  1b0:	00000000 	.word	0x00000000
  1b4:	41004000 	.word	0x41004000
- 1b8:	000001e5 	.word	0x000001e5
- 1bc:	000001d1 	.word	0x000001d1
+ 1b8:	000002c9 	.word	0x000002c9
+ 1bc:	000002a9 	.word	0x000002a9
 
 000001c0 <SystemInit>:
  *         Initialize the System and update the SystemCoreClock variable.
@@ -286,238 +286,575 @@ void SystemInit(void)
  1c8:	003d0900 	.word	0x003d0900
  1cc:	20000000 	.word	0x20000000
 
-000001d0 <main>:
+000001d0 <gpio_pin_config>:
+/*!
+* @brief @todo
+* @return void
+*/
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+ 1d0:	b510      	push	{r4, lr}
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+    uint32_t outset = 0x0000;
     
-volatile eTopState top_state = IDLE;
+    // Check to see if the pin is on port B: set an offset & move pin number
+    if (pin >= GPIO_PORT_PIN_OFFSET)
+ 1d2:	281f      	cmp	r0, #31
+ 1d4:	d94c      	bls.n	270 <gpio_pin_config+0xa0>
+    {
+        gpio_port = GPIO_PORT_B;   
+        pin = GPIO_PORT_PIN_OFFSET - pin;
+    }
     
+    pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
+ 1d6:	2320      	movs	r3, #32
+ 1d8:	1a18      	subs	r0, r3, r0
+ 1da:	3b1f      	subs	r3, #31
+ 1dc:	4083      	lsls	r3, r0
+
+
+    switch (config->pin_type)
+ 1de:	780a      	ldrb	r2, [r1, #0]
+ 1e0:	2a00      	cmp	r2, #0
+ 1e2:	d002      	beq.n	1ea <gpio_pin_config+0x1a>
+ 1e4:	2a01      	cmp	r2, #1
+ 1e6:	d136      	bne.n	256 <gpio_pin_config+0x86>
+ 1e8:	e00a      	b.n	200 <gpio_pin_config+0x30>
+    uint32_t outset = 0x0000;
+    
+    // Check to see if the pin is on port B: set an offset & move pin number
+    if (pin >= GPIO_PORT_PIN_OFFSET)
+    {
+        gpio_port = GPIO_PORT_B;   
+ 1ea:	2401      	movs	r4, #1
+ 1ec:	e000      	b.n	1f0 <gpio_pin_config+0x20>
+* @brief @todo
+* @return void
+*/
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+ 1ee:	2400      	movs	r4, #0
+
+    switch (config->pin_type)
+    {
+        case INPUT:
+            dirclr |= pin_bit;                  // set pin to input
+            if (config->pull == PULLUP)
+ 1f0:	788a      	ldrb	r2, [r1, #2]
+ 1f2:	2a01      	cmp	r2, #1
+ 1f4:	d00e      	beq.n	214 <gpio_pin_config+0x44>
+            {
+                outset |= pin_bit;              // set pin as pullup
+            } else if (config->pull == HIGHZ) {
+ 1f6:	2a00      	cmp	r2, #0
+ 1f8:	d110      	bne.n	21c <gpio_pin_config+0x4c>
+ 1fa:	0018      	movs	r0, r3
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+    uint32_t outset = 0x0000;
+ 1fc:	2100      	movs	r1, #0
+ 1fe:	e018      	b.n	232 <gpio_pin_config+0x62>
+    {
+        gpio_port = GPIO_PORT_B;   
+        pin = GPIO_PORT_PIN_OFFSET - pin;
+    }
+    
+    pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
+ 200:	001a      	movs	r2, r3
+    uint32_t outset = 0x0000;
+    
+    // Check to see if the pin is on port B: set an offset & move pin number
+    if (pin >= GPIO_PORT_PIN_OFFSET)
+    {
+        gpio_port = GPIO_PORT_B;   
+ 202:	2401      	movs	r4, #1
+            }
+        break;
+        
+        case OUTPUT:
+            dirset |= pin_bit;                  // set pin to output
+            if (config->default_drive == HIGH)
+ 204:	784b      	ldrb	r3, [r1, #1]
+ 206:	2b01      	cmp	r3, #1
+ 208:	d00c      	beq.n	224 <gpio_pin_config+0x54>
+            {
+                outset |= pin_bit;              // set output high
+            } else if (config->default_drive == LOW) {
+ 20a:	2b00      	cmp	r3, #0
+ 20c:	d10e      	bne.n	22c <gpio_pin_config+0x5c>
+ 20e:	0010      	movs	r0, r2
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+    uint32_t outset = 0x0000;
+ 210:	2100      	movs	r1, #0
+ 212:	e00e      	b.n	232 <gpio_pin_config+0x62>
+ 214:	0019      	movs	r1, r3
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+ 216:	2000      	movs	r0, #0
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+ 218:	2200      	movs	r2, #0
+ 21a:	e00a      	b.n	232 <gpio_pin_config+0x62>
+    uint32_t outclr = 0x0000;
+    uint32_t outset = 0x0000;
+ 21c:	2100      	movs	r1, #0
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+ 21e:	2000      	movs	r0, #0
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+ 220:	2200      	movs	r2, #0
+ 222:	e006      	b.n	232 <gpio_pin_config+0x62>
+ 224:	0011      	movs	r1, r2
+    uint32_t outclr = 0x0000;
+ 226:	2000      	movs	r0, #0
+*/
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+ 228:	2300      	movs	r3, #0
+ 22a:	e002      	b.n	232 <gpio_pin_config+0x62>
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+    uint32_t outset = 0x0000;
+ 22c:	2100      	movs	r1, #0
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+ 22e:	2000      	movs	r0, #0
+*/
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+ 230:	2300      	movs	r3, #0
+        default:
+        break;
+    }
+    
+    // Apply all changes to appropriate registers
+    switch (gpio_port)
+ 232:	2c00      	cmp	r4, #0
+ 234:	d006      	beq.n	244 <gpio_pin_config+0x74>
+ 236:	2c01      	cmp	r4, #1
+ 238:	d124      	bne.n	284 <gpio_pin_config+0xb4>
+ 23a:	e010      	b.n	25e <gpio_pin_config+0x8e>
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+    uint32_t outset = 0x0000;
+ 23c:	2100      	movs	r1, #0
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+ 23e:	0008      	movs	r0, r1
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+ 240:	000a      	movs	r2, r1
+*/
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+ 242:	000b      	movs	r3, r1
+    
+    // Apply all changes to appropriate registers
+    switch (gpio_port)
+    {
+        case GPIO_PORT_A:
+            REG_PORT_DIRCLR0 = dirclr;
+ 244:	4c10      	ldr	r4, [pc, #64]	; (288 <gpio_pin_config+0xb8>)
+ 246:	6023      	str	r3, [r4, #0]
+            REG_PORT_DIRSET0 = dirset;
+ 248:	4b10      	ldr	r3, [pc, #64]	; (28c <gpio_pin_config+0xbc>)
+ 24a:	601a      	str	r2, [r3, #0]
+            REG_PORT_OUTCLR0 = outclr;
+ 24c:	4b10      	ldr	r3, [pc, #64]	; (290 <gpio_pin_config+0xc0>)
+ 24e:	6018      	str	r0, [r3, #0]
+            REG_PORT_OUTSET0 = outset;
+ 250:	4b10      	ldr	r3, [pc, #64]	; (294 <gpio_pin_config+0xc4>)
+ 252:	6019      	str	r1, [r3, #0]
+        break;
+ 254:	e016      	b.n	284 <gpio_pin_config+0xb4>
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+    uint32_t outset = 0x0000;
+ 256:	2100      	movs	r1, #0
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+    uint32_t outclr = 0x0000;
+ 258:	2000      	movs	r0, #0
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+    uint32_t dirset = 0x0000;
+ 25a:	2200      	movs	r2, #0
+*/
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+    uint32_t pin_bit;
+    uint32_t dirclr = 0x0000;
+ 25c:	2300      	movs	r3, #0
+            REG_PORT_OUTCLR0 = outclr;
+            REG_PORT_OUTSET0 = outset;
+        break;
+        
+        case GPIO_PORT_B:
+            REG_PORT_DIRCLR1 = dirclr;
+ 25e:	4c0e      	ldr	r4, [pc, #56]	; (298 <gpio_pin_config+0xc8>)
+ 260:	6023      	str	r3, [r4, #0]
+            REG_PORT_DIRSET1 = dirset;
+ 262:	4b0e      	ldr	r3, [pc, #56]	; (29c <gpio_pin_config+0xcc>)
+ 264:	601a      	str	r2, [r3, #0]
+            REG_PORT_OUTCLR1 = outclr;
+ 266:	4b0e      	ldr	r3, [pc, #56]	; (2a0 <gpio_pin_config+0xd0>)
+ 268:	6018      	str	r0, [r3, #0]
+            REG_PORT_OUTSET1 = outset;
+ 26a:	4b0e      	ldr	r3, [pc, #56]	; (2a4 <gpio_pin_config+0xd4>)
+ 26c:	6019      	str	r1, [r3, #0]
+        break;
+        
+        default:
+        break;
+    }
+}
+ 26e:	e009      	b.n	284 <gpio_pin_config+0xb4>
+    {
+        gpio_port = GPIO_PORT_B;   
+        pin = GPIO_PORT_PIN_OFFSET - pin;
+    }
+    
+    pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
+ 270:	2301      	movs	r3, #1
+ 272:	4083      	lsls	r3, r0
+
+
+    switch (config->pin_type)
+ 274:	7808      	ldrb	r0, [r1, #0]
+ 276:	2800      	cmp	r0, #0
+ 278:	d0b9      	beq.n	1ee <gpio_pin_config+0x1e>
+    {
+        gpio_port = GPIO_PORT_B;   
+        pin = GPIO_PORT_PIN_OFFSET - pin;
+    }
+    
+    pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
+ 27a:	001a      	movs	r2, r3
+* @brief @todo
+* @return void
+*/
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+    eGpioPortLetter gpio_port = GPIO_PORT_A;
+ 27c:	2400      	movs	r4, #0
+    }
+    
+    pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
+
+
+    switch (config->pin_type)
+ 27e:	2801      	cmp	r0, #1
+ 280:	d0c0      	beq.n	204 <gpio_pin_config+0x34>
+ 282:	e7db      	b.n	23c <gpio_pin_config+0x6c>
+        break;
+        
+        default:
+        break;
+    }
+}
+ 284:	bd10      	pop	{r4, pc}
+ 286:	46c0      	nop			; (mov r8, r8)
+ 288:	40002804 	.word	0x40002804
+ 28c:	40002808 	.word	0x40002808
+ 290:	40002814 	.word	0x40002814
+ 294:	40002818 	.word	0x40002818
+ 298:	40002884 	.word	0x40002884
+ 29c:	40002888 	.word	0x40002888
+ 2a0:	40002894 	.word	0x40002894
+ 2a4:	40002898 	.word	0x40002898
+
+000002a8 <main>:
+    .default_drive = LOW
+};    
+
 
 int main(void)
 {
- 1d0:	b510      	push	{r4, lr}
+ 2a8:	b510      	push	{r4, lr}
     /* Initialize the system */
     SystemInit();
- 1d2:	4b02      	ldr	r3, [pc, #8]	; (1dc <main+0xc>)
- 1d4:	4798      	blx	r3
+ 2aa:	4b04      	ldr	r3, [pc, #16]	; (2bc <main+0x14>)
+ 2ac:	4798      	blx	r3
+    gpio_pin_config(LED_R1_PIN, led_cfg);
+ 2ae:	4b04      	ldr	r3, [pc, #16]	; (2c0 <main+0x18>)
+ 2b0:	6819      	ldr	r1, [r3, #0]
+ 2b2:	2007      	movs	r0, #7
+ 2b4:	4b03      	ldr	r3, [pc, #12]	; (2c4 <main+0x1c>)
+ 2b6:	4798      	blx	r3
+ 2b8:	e7fe      	b.n	2b8 <main+0x10>
+ 2ba:	46c0      	nop			; (mov r8, r8)
+ 2bc:	000001c1 	.word	0x000001c1
+ 2c0:	20000004 	.word	0x20000004
+ 2c4:	000001d1 	.word	0x000001d1
 
-    /* Application Loop */
-    while(1) 
-    {
-        // Top level state machine
-        switch(top_state)
- 1d6:	4b02      	ldr	r3, [pc, #8]	; (1e0 <main+0x10>)
- 1d8:	781a      	ldrb	r2, [r3, #0]
- 1da:	e7fd      	b.n	1d8 <main+0x8>
- 1dc:	000001c1 	.word	0x000001c1
- 1e0:	2000044c 	.word	0x2000044c
+000002c8 <__libc_init_array>:
+ 2c8:	b570      	push	{r4, r5, r6, lr}
+ 2ca:	4e0d      	ldr	r6, [pc, #52]	; (300 <__libc_init_array+0x38>)
+ 2cc:	4d0d      	ldr	r5, [pc, #52]	; (304 <__libc_init_array+0x3c>)
+ 2ce:	2400      	movs	r4, #0
+ 2d0:	1bad      	subs	r5, r5, r6
+ 2d2:	10ad      	asrs	r5, r5, #2
+ 2d4:	d005      	beq.n	2e2 <__libc_init_array+0x1a>
+ 2d6:	00a3      	lsls	r3, r4, #2
+ 2d8:	58f3      	ldr	r3, [r6, r3]
+ 2da:	3401      	adds	r4, #1
+ 2dc:	4798      	blx	r3
+ 2de:	42a5      	cmp	r5, r4
+ 2e0:	d1f9      	bne.n	2d6 <__libc_init_array+0xe>
+ 2e2:	f000 f8b1 	bl	448 <_init>
+ 2e6:	4e08      	ldr	r6, [pc, #32]	; (308 <__libc_init_array+0x40>)
+ 2e8:	4d08      	ldr	r5, [pc, #32]	; (30c <__libc_init_array+0x44>)
+ 2ea:	2400      	movs	r4, #0
+ 2ec:	1bad      	subs	r5, r5, r6
+ 2ee:	10ad      	asrs	r5, r5, #2
+ 2f0:	d005      	beq.n	2fe <__libc_init_array+0x36>
+ 2f2:	00a3      	lsls	r3, r4, #2
+ 2f4:	58f3      	ldr	r3, [r6, r3]
+ 2f6:	3401      	adds	r4, #1
+ 2f8:	4798      	blx	r3
+ 2fa:	42a5      	cmp	r5, r4
+ 2fc:	d1f9      	bne.n	2f2 <__libc_init_array+0x2a>
+ 2fe:	bd70      	pop	{r4, r5, r6, pc}
+ 300:	00000454 	.word	0x00000454
+ 304:	00000454 	.word	0x00000454
+ 308:	00000454 	.word	0x00000454
+ 30c:	0000045c 	.word	0x0000045c
 
-000001e4 <__libc_init_array>:
- 1e4:	b570      	push	{r4, r5, r6, lr}
- 1e6:	4e0d      	ldr	r6, [pc, #52]	; (21c <__libc_init_array+0x38>)
- 1e8:	4d0d      	ldr	r5, [pc, #52]	; (220 <__libc_init_array+0x3c>)
- 1ea:	2400      	movs	r4, #0
- 1ec:	1bad      	subs	r5, r5, r6
- 1ee:	10ad      	asrs	r5, r5, #2
- 1f0:	d005      	beq.n	1fe <__libc_init_array+0x1a>
- 1f2:	00a3      	lsls	r3, r4, #2
- 1f4:	58f3      	ldr	r3, [r6, r3]
- 1f6:	3401      	adds	r4, #1
- 1f8:	4798      	blx	r3
- 1fa:	42a5      	cmp	r5, r4
- 1fc:	d1f9      	bne.n	1f2 <__libc_init_array+0xe>
- 1fe:	f000 f8b1 	bl	364 <_init>
- 202:	4e08      	ldr	r6, [pc, #32]	; (224 <__libc_init_array+0x40>)
- 204:	4d08      	ldr	r5, [pc, #32]	; (228 <__libc_init_array+0x44>)
- 206:	2400      	movs	r4, #0
- 208:	1bad      	subs	r5, r5, r6
- 20a:	10ad      	asrs	r5, r5, #2
- 20c:	d005      	beq.n	21a <__libc_init_array+0x36>
- 20e:	00a3      	lsls	r3, r4, #2
- 210:	58f3      	ldr	r3, [r6, r3]
- 212:	3401      	adds	r4, #1
- 214:	4798      	blx	r3
- 216:	42a5      	cmp	r5, r4
- 218:	d1f9      	bne.n	20e <__libc_init_array+0x2a>
- 21a:	bd70      	pop	{r4, r5, r6, pc}
- 21c:	00000370 	.word	0x00000370
- 220:	00000370 	.word	0x00000370
- 224:	00000370 	.word	0x00000370
- 228:	00000378 	.word	0x00000378
+00000310 <register_fini>:
+ 310:	4b03      	ldr	r3, [pc, #12]	; (320 <register_fini+0x10>)
+ 312:	b510      	push	{r4, lr}
+ 314:	2b00      	cmp	r3, #0
+ 316:	d002      	beq.n	31e <register_fini+0xe>
+ 318:	4802      	ldr	r0, [pc, #8]	; (324 <register_fini+0x14>)
+ 31a:	f000 f805 	bl	328 <atexit>
+ 31e:	bd10      	pop	{r4, pc}
+ 320:	00000000 	.word	0x00000000
+ 324:	00000339 	.word	0x00000339
 
-0000022c <register_fini>:
- 22c:	4b03      	ldr	r3, [pc, #12]	; (23c <register_fini+0x10>)
- 22e:	b510      	push	{r4, lr}
- 230:	2b00      	cmp	r3, #0
- 232:	d002      	beq.n	23a <register_fini+0xe>
- 234:	4802      	ldr	r0, [pc, #8]	; (240 <register_fini+0x14>)
- 236:	f000 f805 	bl	244 <atexit>
- 23a:	bd10      	pop	{r4, pc}
- 23c:	00000000 	.word	0x00000000
- 240:	00000255 	.word	0x00000255
+00000328 <atexit>:
+ 328:	b510      	push	{r4, lr}
+ 32a:	0001      	movs	r1, r0
+ 32c:	2300      	movs	r3, #0
+ 32e:	2200      	movs	r2, #0
+ 330:	2000      	movs	r0, #0
+ 332:	f000 f81b 	bl	36c <__register_exitproc>
+ 336:	bd10      	pop	{r4, pc}
 
-00000244 <atexit>:
- 244:	b510      	push	{r4, lr}
- 246:	0001      	movs	r1, r0
- 248:	2300      	movs	r3, #0
- 24a:	2200      	movs	r2, #0
- 24c:	2000      	movs	r0, #0
- 24e:	f000 f81b 	bl	288 <__register_exitproc>
- 252:	bd10      	pop	{r4, pc}
+00000338 <__libc_fini_array>:
+ 338:	b570      	push	{r4, r5, r6, lr}
+ 33a:	4b09      	ldr	r3, [pc, #36]	; (360 <__libc_fini_array+0x28>)
+ 33c:	4c09      	ldr	r4, [pc, #36]	; (364 <__libc_fini_array+0x2c>)
+ 33e:	1ae4      	subs	r4, r4, r3
+ 340:	10a4      	asrs	r4, r4, #2
+ 342:	d009      	beq.n	358 <__libc_fini_array+0x20>
+ 344:	4a08      	ldr	r2, [pc, #32]	; (368 <__libc_fini_array+0x30>)
+ 346:	18a5      	adds	r5, r4, r2
+ 348:	00ad      	lsls	r5, r5, #2
+ 34a:	18ed      	adds	r5, r5, r3
+ 34c:	682b      	ldr	r3, [r5, #0]
+ 34e:	3c01      	subs	r4, #1
+ 350:	4798      	blx	r3
+ 352:	3d04      	subs	r5, #4
+ 354:	2c00      	cmp	r4, #0
+ 356:	d1f9      	bne.n	34c <__libc_fini_array+0x14>
+ 358:	f000 f880 	bl	45c <_fini>
+ 35c:	bd70      	pop	{r4, r5, r6, pc}
+ 35e:	46c0      	nop			; (mov r8, r8)
+ 360:	00000468 	.word	0x00000468
+ 364:	0000046c 	.word	0x0000046c
+ 368:	3fffffff 	.word	0x3fffffff
 
-00000254 <__libc_fini_array>:
- 254:	b570      	push	{r4, r5, r6, lr}
- 256:	4b09      	ldr	r3, [pc, #36]	; (27c <__libc_fini_array+0x28>)
- 258:	4c09      	ldr	r4, [pc, #36]	; (280 <__libc_fini_array+0x2c>)
- 25a:	1ae4      	subs	r4, r4, r3
- 25c:	10a4      	asrs	r4, r4, #2
- 25e:	d009      	beq.n	274 <__libc_fini_array+0x20>
- 260:	4a08      	ldr	r2, [pc, #32]	; (284 <__libc_fini_array+0x30>)
- 262:	18a5      	adds	r5, r4, r2
- 264:	00ad      	lsls	r5, r5, #2
- 266:	18ed      	adds	r5, r5, r3
- 268:	682b      	ldr	r3, [r5, #0]
- 26a:	3c01      	subs	r4, #1
- 26c:	4798      	blx	r3
- 26e:	3d04      	subs	r5, #4
- 270:	2c00      	cmp	r4, #0
- 272:	d1f9      	bne.n	268 <__libc_fini_array+0x14>
- 274:	f000 f880 	bl	378 <_fini>
- 278:	bd70      	pop	{r4, r5, r6, pc}
- 27a:	46c0      	nop			; (mov r8, r8)
- 27c:	00000384 	.word	0x00000384
- 280:	00000388 	.word	0x00000388
- 284:	3fffffff 	.word	0x3fffffff
+0000036c <__register_exitproc>:
+ 36c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 36e:	4644      	mov	r4, r8
+ 370:	465f      	mov	r7, fp
+ 372:	4656      	mov	r6, sl
+ 374:	464d      	mov	r5, r9
+ 376:	469b      	mov	fp, r3
+ 378:	4b2f      	ldr	r3, [pc, #188]	; (438 <__register_exitproc+0xcc>)
+ 37a:	b4f0      	push	{r4, r5, r6, r7}
+ 37c:	681c      	ldr	r4, [r3, #0]
+ 37e:	23a4      	movs	r3, #164	; 0xa4
+ 380:	005b      	lsls	r3, r3, #1
+ 382:	0005      	movs	r5, r0
+ 384:	58e0      	ldr	r0, [r4, r3]
+ 386:	000e      	movs	r6, r1
+ 388:	4690      	mov	r8, r2
+ 38a:	2800      	cmp	r0, #0
+ 38c:	d04b      	beq.n	426 <__register_exitproc+0xba>
+ 38e:	6843      	ldr	r3, [r0, #4]
+ 390:	2b1f      	cmp	r3, #31
+ 392:	dc0d      	bgt.n	3b0 <__register_exitproc+0x44>
+ 394:	1c5c      	adds	r4, r3, #1
+ 396:	2d00      	cmp	r5, #0
+ 398:	d121      	bne.n	3de <__register_exitproc+0x72>
+ 39a:	3302      	adds	r3, #2
+ 39c:	009b      	lsls	r3, r3, #2
+ 39e:	6044      	str	r4, [r0, #4]
+ 3a0:	501e      	str	r6, [r3, r0]
+ 3a2:	2000      	movs	r0, #0
+ 3a4:	bc3c      	pop	{r2, r3, r4, r5}
+ 3a6:	4690      	mov	r8, r2
+ 3a8:	4699      	mov	r9, r3
+ 3aa:	46a2      	mov	sl, r4
+ 3ac:	46ab      	mov	fp, r5
+ 3ae:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+ 3b0:	4b22      	ldr	r3, [pc, #136]	; (43c <__register_exitproc+0xd0>)
+ 3b2:	2b00      	cmp	r3, #0
+ 3b4:	d03c      	beq.n	430 <__register_exitproc+0xc4>
+ 3b6:	20c8      	movs	r0, #200	; 0xc8
+ 3b8:	0040      	lsls	r0, r0, #1
+ 3ba:	e000      	b.n	3be <__register_exitproc+0x52>
+ 3bc:	bf00      	nop
+ 3be:	2800      	cmp	r0, #0
+ 3c0:	d036      	beq.n	430 <__register_exitproc+0xc4>
+ 3c2:	22a4      	movs	r2, #164	; 0xa4
+ 3c4:	2300      	movs	r3, #0
+ 3c6:	0052      	lsls	r2, r2, #1
+ 3c8:	58a1      	ldr	r1, [r4, r2]
+ 3ca:	6043      	str	r3, [r0, #4]
+ 3cc:	6001      	str	r1, [r0, #0]
+ 3ce:	50a0      	str	r0, [r4, r2]
+ 3d0:	3240      	adds	r2, #64	; 0x40
+ 3d2:	5083      	str	r3, [r0, r2]
+ 3d4:	3204      	adds	r2, #4
+ 3d6:	5083      	str	r3, [r0, r2]
+ 3d8:	2401      	movs	r4, #1
+ 3da:	2d00      	cmp	r5, #0
+ 3dc:	d0dd      	beq.n	39a <__register_exitproc+0x2e>
+ 3de:	009a      	lsls	r2, r3, #2
+ 3e0:	4691      	mov	r9, r2
+ 3e2:	4481      	add	r9, r0
+ 3e4:	4642      	mov	r2, r8
+ 3e6:	2188      	movs	r1, #136	; 0x88
+ 3e8:	464f      	mov	r7, r9
+ 3ea:	507a      	str	r2, [r7, r1]
+ 3ec:	22c4      	movs	r2, #196	; 0xc4
+ 3ee:	0052      	lsls	r2, r2, #1
+ 3f0:	4690      	mov	r8, r2
+ 3f2:	4480      	add	r8, r0
+ 3f4:	4642      	mov	r2, r8
+ 3f6:	3987      	subs	r1, #135	; 0x87
+ 3f8:	4099      	lsls	r1, r3
+ 3fa:	6812      	ldr	r2, [r2, #0]
+ 3fc:	468a      	mov	sl, r1
+ 3fe:	430a      	orrs	r2, r1
+ 400:	4694      	mov	ip, r2
+ 402:	4642      	mov	r2, r8
+ 404:	4661      	mov	r1, ip
+ 406:	6011      	str	r1, [r2, #0]
+ 408:	2284      	movs	r2, #132	; 0x84
+ 40a:	4649      	mov	r1, r9
+ 40c:	465f      	mov	r7, fp
+ 40e:	0052      	lsls	r2, r2, #1
+ 410:	508f      	str	r7, [r1, r2]
+ 412:	2d02      	cmp	r5, #2
+ 414:	d1c1      	bne.n	39a <__register_exitproc+0x2e>
+ 416:	0002      	movs	r2, r0
+ 418:	4655      	mov	r5, sl
+ 41a:	328d      	adds	r2, #141	; 0x8d
+ 41c:	32ff      	adds	r2, #255	; 0xff
+ 41e:	6811      	ldr	r1, [r2, #0]
+ 420:	430d      	orrs	r5, r1
+ 422:	6015      	str	r5, [r2, #0]
+ 424:	e7b9      	b.n	39a <__register_exitproc+0x2e>
+ 426:	0020      	movs	r0, r4
+ 428:	304d      	adds	r0, #77	; 0x4d
+ 42a:	30ff      	adds	r0, #255	; 0xff
+ 42c:	50e0      	str	r0, [r4, r3]
+ 42e:	e7ae      	b.n	38e <__register_exitproc+0x22>
+ 430:	2001      	movs	r0, #1
+ 432:	4240      	negs	r0, r0
+ 434:	e7b6      	b.n	3a4 <__register_exitproc+0x38>
+ 436:	46c0      	nop			; (mov r8, r8)
+ 438:	00000444 	.word	0x00000444
+ 43c:	00000000 	.word	0x00000000
+ 440:	00000043 	.word	0x00000043
 
-00000288 <__register_exitproc>:
- 288:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 28a:	4644      	mov	r4, r8
- 28c:	465f      	mov	r7, fp
- 28e:	4656      	mov	r6, sl
- 290:	464d      	mov	r5, r9
- 292:	469b      	mov	fp, r3
- 294:	4b2f      	ldr	r3, [pc, #188]	; (354 <__register_exitproc+0xcc>)
- 296:	b4f0      	push	{r4, r5, r6, r7}
- 298:	681c      	ldr	r4, [r3, #0]
- 29a:	23a4      	movs	r3, #164	; 0xa4
- 29c:	005b      	lsls	r3, r3, #1
- 29e:	0005      	movs	r5, r0
- 2a0:	58e0      	ldr	r0, [r4, r3]
- 2a2:	000e      	movs	r6, r1
- 2a4:	4690      	mov	r8, r2
- 2a6:	2800      	cmp	r0, #0
- 2a8:	d04b      	beq.n	342 <__register_exitproc+0xba>
- 2aa:	6843      	ldr	r3, [r0, #4]
- 2ac:	2b1f      	cmp	r3, #31
- 2ae:	dc0d      	bgt.n	2cc <__register_exitproc+0x44>
- 2b0:	1c5c      	adds	r4, r3, #1
- 2b2:	2d00      	cmp	r5, #0
- 2b4:	d121      	bne.n	2fa <__register_exitproc+0x72>
- 2b6:	3302      	adds	r3, #2
- 2b8:	009b      	lsls	r3, r3, #2
- 2ba:	6044      	str	r4, [r0, #4]
- 2bc:	501e      	str	r6, [r3, r0]
- 2be:	2000      	movs	r0, #0
- 2c0:	bc3c      	pop	{r2, r3, r4, r5}
- 2c2:	4690      	mov	r8, r2
- 2c4:	4699      	mov	r9, r3
- 2c6:	46a2      	mov	sl, r4
- 2c8:	46ab      	mov	fp, r5
- 2ca:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
- 2cc:	4b22      	ldr	r3, [pc, #136]	; (358 <__register_exitproc+0xd0>)
- 2ce:	2b00      	cmp	r3, #0
- 2d0:	d03c      	beq.n	34c <__register_exitproc+0xc4>
- 2d2:	20c8      	movs	r0, #200	; 0xc8
- 2d4:	0040      	lsls	r0, r0, #1
- 2d6:	e000      	b.n	2da <__register_exitproc+0x52>
- 2d8:	bf00      	nop
- 2da:	2800      	cmp	r0, #0
- 2dc:	d036      	beq.n	34c <__register_exitproc+0xc4>
- 2de:	22a4      	movs	r2, #164	; 0xa4
- 2e0:	2300      	movs	r3, #0
- 2e2:	0052      	lsls	r2, r2, #1
- 2e4:	58a1      	ldr	r1, [r4, r2]
- 2e6:	6043      	str	r3, [r0, #4]
- 2e8:	6001      	str	r1, [r0, #0]
- 2ea:	50a0      	str	r0, [r4, r2]
- 2ec:	3240      	adds	r2, #64	; 0x40
- 2ee:	5083      	str	r3, [r0, r2]
- 2f0:	3204      	adds	r2, #4
- 2f2:	5083      	str	r3, [r0, r2]
- 2f4:	2401      	movs	r4, #1
- 2f6:	2d00      	cmp	r5, #0
- 2f8:	d0dd      	beq.n	2b6 <__register_exitproc+0x2e>
- 2fa:	009a      	lsls	r2, r3, #2
- 2fc:	4691      	mov	r9, r2
- 2fe:	4481      	add	r9, r0
- 300:	4642      	mov	r2, r8
- 302:	2188      	movs	r1, #136	; 0x88
- 304:	464f      	mov	r7, r9
- 306:	507a      	str	r2, [r7, r1]
- 308:	22c4      	movs	r2, #196	; 0xc4
- 30a:	0052      	lsls	r2, r2, #1
- 30c:	4690      	mov	r8, r2
- 30e:	4480      	add	r8, r0
- 310:	4642      	mov	r2, r8
- 312:	3987      	subs	r1, #135	; 0x87
- 314:	4099      	lsls	r1, r3
- 316:	6812      	ldr	r2, [r2, #0]
- 318:	468a      	mov	sl, r1
- 31a:	430a      	orrs	r2, r1
- 31c:	4694      	mov	ip, r2
- 31e:	4642      	mov	r2, r8
- 320:	4661      	mov	r1, ip
- 322:	6011      	str	r1, [r2, #0]
- 324:	2284      	movs	r2, #132	; 0x84
- 326:	4649      	mov	r1, r9
- 328:	465f      	mov	r7, fp
- 32a:	0052      	lsls	r2, r2, #1
- 32c:	508f      	str	r7, [r1, r2]
- 32e:	2d02      	cmp	r5, #2
- 330:	d1c1      	bne.n	2b6 <__register_exitproc+0x2e>
- 332:	0002      	movs	r2, r0
- 334:	4655      	mov	r5, sl
- 336:	328d      	adds	r2, #141	; 0x8d
- 338:	32ff      	adds	r2, #255	; 0xff
- 33a:	6811      	ldr	r1, [r2, #0]
- 33c:	430d      	orrs	r5, r1
- 33e:	6015      	str	r5, [r2, #0]
- 340:	e7b9      	b.n	2b6 <__register_exitproc+0x2e>
- 342:	0020      	movs	r0, r4
- 344:	304d      	adds	r0, #77	; 0x4d
- 346:	30ff      	adds	r0, #255	; 0xff
- 348:	50e0      	str	r0, [r4, r3]
- 34a:	e7ae      	b.n	2aa <__register_exitproc+0x22>
- 34c:	2001      	movs	r0, #1
- 34e:	4240      	negs	r0, r0
- 350:	e7b6      	b.n	2c0 <__register_exitproc+0x38>
- 352:	46c0      	nop			; (mov r8, r8)
- 354:	00000360 	.word	0x00000360
- 358:	00000000 	.word	0x00000000
- 35c:	00000043 	.word	0x00000043
+00000444 <_global_impure_ptr>:
+ 444:	20000010                                ... 
 
-00000360 <_global_impure_ptr>:
- 360:	20000008                                ... 
+00000448 <_init>:
+ 448:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 44a:	46c0      	nop			; (mov r8, r8)
+ 44c:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 44e:	bc08      	pop	{r3}
+ 450:	469e      	mov	lr, r3
+ 452:	4770      	bx	lr
 
-00000364 <_init>:
- 364:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 366:	46c0      	nop			; (mov r8, r8)
- 368:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 36a:	bc08      	pop	{r3}
- 36c:	469e      	mov	lr, r3
- 36e:	4770      	bx	lr
+00000454 <__init_array_start>:
+ 454:	00000311 	.word	0x00000311
 
-00000370 <__init_array_start>:
- 370:	0000022d 	.word	0x0000022d
+00000458 <__frame_dummy_init_array_entry>:
+ 458:	000000dd                                ....
 
-00000374 <__frame_dummy_init_array_entry>:
- 374:	000000dd                                ....
+0000045c <_fini>:
+ 45c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 45e:	46c0      	nop			; (mov r8, r8)
+ 460:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 462:	bc08      	pop	{r3}
+ 464:	469e      	mov	lr, r3
+ 466:	4770      	bx	lr
 
-00000378 <_fini>:
- 378:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 37a:	46c0      	nop			; (mov r8, r8)
- 37c:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 37e:	bc08      	pop	{r3}
- 380:	469e      	mov	lr, r3
- 382:	4770      	bx	lr
-
-00000384 <__fini_array_start>:
- 384:	000000b5 	.word	0x000000b5
+00000468 <__fini_array_start>:
+ 468:	000000b5 	.word	0x000000b5
