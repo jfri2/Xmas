@@ -46,59 +46,7 @@ uint32_t SystemCoreClock = __SYSTEM_CLOCK;
 void SystemInit(void)
 {
 	// Keep the default device state after reset
-	SystemCoreClock = __SYSTEM_CLOCK;
-    
-    // Initialize Systick for 1ms interrupts (if applicable)
-    
-    // Initialize GPIO
-        /**********************************************************************
-         * GPIO Requirements:
-         *  Create device descriptor for at a minimum the following:
-         *      output: init output hight, set high/low
-         *      input:  init input, set pullup/pulldown/none
-         *  Allow dynamic configuration of GPIO by passing configuration struct
-         *  Initialize all GPIOs on board to their functions & set default lvls
-         *********************************************************************/
-    
-	
-    // Initialize PWM (TC and TCC modules for PWM only)
-        /**********************************************************************
-         * PWM Requirements:
-         *  Run at >= 10 kHz, < 1 MHz
-         *  Each TC and TCC shall run at the same frequency
-         *  Frequency shall be passed to this function
-         *  Includes initialization for output PWM pins. Default set to 0% duty 
-         *********************************************************************/
-    
-    // Initialize Timer (TC module for audio playback)
-        /**********************************************************************
-         * TC Requirements:
-         *  Run at sampling frequency of audio file
-         *  Compare on overflow or compare on match
-         *  Sampling frequency shall be passed to this function
-         *********************************************************************/
-        
-    // Initialize UART
-        /**********************************************************************
-         * UART Requirements:
-         *  Run at variety of baud rates (dynamically calculate divider)
-         *  Baud rate shall be passed to this function
-         *********************************************************************/
-    
-    // Initialize SPI
-        /**********************************************************************
-         * SPI Requirements
-         *  TBD - see SPI flash datasheet
-         *  Requires GPIO to be configured (set Flash CS, WP, and Hold high)
-         *********************************************************************/
-    
-    // Initialize DAC
-        /**********************************************************************
-         * DAC Requirements
-         *  TBD
-         *********************************************************************/
-        
-            
+	SystemCoreClock = __SYSTEM_CLOCK;           
 }
 
 /**

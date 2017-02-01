@@ -1,4 +1,4 @@
-gpio.d gpio.o: ../Drivers/gpio.c ../Drivers/gpio.h \
+gpio.d gpio.o: ../drv/gpio.c ../drv/gpio.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\5.3.1\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h \
@@ -84,7 +84,7 @@ gpio.d gpio.o: ../Drivers/gpio.c ../Drivers/gpio.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include/pio/saml21j18b.h
 
-../Drivers/gpio.h:
+../drv/gpio.h:
 
 c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\5.3.1\include\stdint.h:
 

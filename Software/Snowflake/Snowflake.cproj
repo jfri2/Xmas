@@ -121,6 +121,7 @@
     <ListValues>
       <Value>%24(PackRepoDir)\atmel\SAML21_DFP\1.1.103\saml21b\include</Value>
       <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+      <Value>..</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -138,6 +139,7 @@
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
+  <armgcc.linker.memorysettings.ExternalRAM />
   <armgcc.linker.miscellaneous.LinkerFlags>-Tsaml21j18b_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
@@ -175,51 +177,75 @@
     <Compile Include="Device_Startup\system_saml21.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="Drivers\gpio.c">
+    <Compile Include="drv\clock.c">
+      <SubType>compile</SubType>
+      <Link>clock.c</Link>
+    </Compile>
+    <Compile Include="drv\clock.h">
+      <SubType>compile</SubType>
+      <Link>clock.h</Link>
+    </Compile>
+    <Compile Include="drv\dac.c">
+      <SubType>compile</SubType>
+      <Link>dac.c</Link>
+    </Compile>
+    <Compile Include="drv\dac.h">
+      <SubType>compile</SubType>
+      <Link>dac.h</Link>
+    </Compile>
+    <Compile Include="drv\gpio.c">
       <SubType>compile</SubType>
       <Link>gpio.c</Link>
     </Compile>
-    <Compile Include="Drivers\gpio.h">
+    <Compile Include="drv\gpio.h">
       <SubType>compile</SubType>
       <Link>gpio.h</Link>
     </Compile>
-    <Compile Include="Lib\audio.c">
+    <Compile Include="drv\timer.c">
+      <SubType>compile</SubType>
+      <Link>timer.c</Link>
+    </Compile>
+    <Compile Include="drv\timer.h">
+      <SubType>compile</SubType>
+      <Link>timer.h</Link>
+    </Compile>
+    <Compile Include="lib\audio.c">
       <SubType>compile</SubType>
       <Link>audio.c</Link>
     </Compile>
-    <Compile Include="Lib\audio.h">
+    <Compile Include="lib\audio.h">
       <SubType>compile</SubType>
       <Link>audio.h</Link>
     </Compile>
-    <Compile Include="Lib\flash.c">
+    <Compile Include="lib\flash.c">
       <SubType>compile</SubType>
       <Link>flash.c</Link>
     </Compile>
-    <Compile Include="Lib\flash.h">
+    <Compile Include="lib\flash.h">
       <SubType>compile</SubType>
       <Link>flash.h</Link>
     </Compile>
-    <Compile Include="Lib\led.c">
+    <Compile Include="lib\led.c">
       <SubType>compile</SubType>
       <Link>led.c</Link>
     </Compile>
-    <Compile Include="Lib\led.h">
+    <Compile Include="lib\led.h">
       <SubType>compile</SubType>
       <Link>led.h</Link>
     </Compile>
-    <Compile Include="Lib\pb.c">
+    <Compile Include="lib\pb.c">
       <SubType>compile</SubType>
       <Link>pb.c</Link>
     </Compile>
-    <Compile Include="Lib\pb.h">
+    <Compile Include="lib\pb.h">
       <SubType>compile</SubType>
       <Link>pb.h</Link>
     </Compile>
-    <Compile Include="Lib\usb_app.c">
+    <Compile Include="lib\usb_app.c">
       <SubType>compile</SubType>
       <Link>usb_app.c</Link>
     </Compile>
-    <Compile Include="Lib\usb_app.h">
+    <Compile Include="lib\usb_app.h">
       <SubType>compile</SubType>
       <Link>usb_app.h</Link>
     </Compile>

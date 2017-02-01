@@ -1,5 +1,4 @@
-common.d common.o: .././common.c .././common.h .././board.h \
- c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\5.3.1\include\stdbool.h \
+main.d main.o: .././main.c \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include/sam.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include/saml21j18b.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\5.3.1\include\stdint.h \
@@ -83,13 +82,10 @@ common.d common.o: .././common.c .././common.h .././board.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include/instance/usb.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include/instance/wdt.h \
  C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include/pio/saml21j18b.h \
- .././drv/gpio.h
-
-.././common.h:
-
-.././board.h:
-
-c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\5.3.1\include\stdbool.h:
+ .././board.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\5.3.1\include\stdbool.h \
+ .././common.h .././drv/gpio.h .././lib/audio.h .././lib/flash.h \
+ .././lib/led.h .././lib/pb.h .././lib/usb_app.h
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include/sam.h:
 
@@ -257,4 +253,20 @@ C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b
 
 C:\Program\ Files\ (x86)\Atmel\Studio\7.0\Packs\atmel\SAML21_DFP\1.1.103\saml21b\include/pio/saml21j18b.h:
 
+.././board.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\5.3.1\include\stdbool.h:
+
+.././common.h:
+
 .././drv/gpio.h:
+
+.././lib/audio.h:
+
+.././lib/flash.h:
+
+.././lib/led.h:
+
+.././lib/pb.h:
+
+.././lib/usb_app.h:

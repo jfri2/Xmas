@@ -7,7 +7,7 @@
 * All rights reserved
 */
 
-#include "flash.h"
+#include "lib/flash.h"
 #include "common.h"
 
 /*!

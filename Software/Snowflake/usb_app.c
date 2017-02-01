@@ -7,8 +7,8 @@
 * All rights reserved
 */
 
-#include "usb_app.h"
-#include <common.h>
+#include "lib/usb_app.h"
+#include "common.h"
 
 /*!
 * @brief @todo
@@ -18,5 +18,4 @@ void usb_app_init(void)
 {    
     // Configure USB Vbus monitor as input without pullup
     gpio_pin_config(USB_VBUS_DET_PIN, &gpio_input_cfg_highz);
-
 }

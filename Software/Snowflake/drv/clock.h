@@ -15,8 +15,6 @@ extern "C"
 {
 #endif
 
-void adc_read(uint8_t adc_mux, uint16_t *adc_val, uint16_t adc_val_len);
-
 #ifdef __cplusplus
 }
 #endif

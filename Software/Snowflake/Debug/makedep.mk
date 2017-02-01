@@ -8,17 +8,23 @@ Device_Startup\startup_saml21.c
 
 Device_Startup\system_saml21.c
 
-Drivers\gpio.c
+drv\clock.c
 
-Lib\audio.c
+drv\dac.c
 
-Lib\flash.c
+drv\gpio.c
 
-Lib\led.c
+drv\timer.c
 
-Lib\pb.c
+lib\audio.c
 
-Lib\usb_app.c
+lib\flash.c
+
+lib\led.c
+
+lib\pb.c
+
+lib\usb_app.c
 
 main.c
 

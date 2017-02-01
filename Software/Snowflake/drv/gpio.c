@@ -16,18 +16,18 @@
 */
 void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
 {
-    eGpioPortLetter gpio_port = GPIO_PORT_A;
-    uint32_t pin_bit;
-    uint32_t dirclr = 0x0000;
-    uint32_t dirset = 0x0000;
-    uint32_t outclr = 0x0000;
-    uint32_t outset = 0x0000;
+    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+    volatile uint32_t pin_bit;
+    volatile uint32_t dirclr = 0x0000;
+    volatile uint32_t dirset = 0x0000;
+    volatile uint32_t outclr = 0x0000;
+    volatile uint32_t outset = 0x0000;
     
     // Check to see if the pin is on port B: set an offset & move pin number
     if (pin >= GPIO_PORT_PIN_OFFSET)
     {
         gpio_port = GPIO_PORT_B;   
-        pin = GPIO_PORT_PIN_OFFSET - pin;
+        pin -= GPIO_PORT_PIN_OFFSET;
     }
     
     pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
@@ -39,10 +39,10 @@ void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
             dirclr |= pin_bit;                  // set pin to input
             if (config->pull == PULLUP)
             {
-                outset |= pin_bit;              // set pin as pullup
+                outset = pin_bit;              // set pin as pullup
             } 
             else if (config->pull == HIGHZ) {
-                outclr |= pin_bit;              // set pin as HIGHZ
+                outclr = pin_bit;              // set pin as HIGHZ
             }
         break;
         
@@ -50,10 +50,10 @@ void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
             dirset |= pin_bit;                  // set pin to output
             if (config->default_drive == HIGH)
             {
-                outset |= pin_bit;              // set output high
+                outset = pin_bit;              // set output high
             } 
             else if (config->default_drive == LOW) {
-                outclr |= pin_bit;              // set output low
+                outclr = pin_bit;              // set output low
             }            
         break;
         
@@ -93,14 +93,14 @@ void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
 */
 void gpio_set_pin_level(uint32_t pin, eGpioLevel level)
 {
-    eGpioPortLetter gpio_port = GPIO_PORT_A;
-    uint32_t pin_bit;
+    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+    volatile uint32_t pin_bit = 0;
     
     // Check to see if the pin is on port B: set an offset & move pin number
     if (pin >= GPIO_PORT_PIN_OFFSET)
     {
         gpio_port = GPIO_PORT_B;
-        pin = GPIO_PORT_PIN_OFFSET - pin;
+        pin -= GPIO_PORT_PIN_OFFSET;
     }
     
     pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
@@ -110,11 +110,11 @@ void gpio_set_pin_level(uint32_t pin, eGpioLevel level)
         switch (gpio_port)
         {
             case GPIO_PORT_A:
-            REG_PORT_OUTCLR0 |= pin_bit;
+            REG_PORT_OUTCLR0 = pin_bit;
             break;
             
             case GPIO_PORT_B:
-            REG_PORT_OUTSET1 |= pin_bit;
+            REG_PORT_OUTCLR1 = pin_bit;
             break;
             
             default:
@@ -126,11 +126,11 @@ void gpio_set_pin_level(uint32_t pin, eGpioLevel level)
         switch (gpio_port)
         {
             case GPIO_PORT_A:
-            REG_PORT_OUTSET0 |= pin_bit;
+            REG_PORT_OUTSET0 = pin_bit;
             break;
             
             case GPIO_PORT_B:
-            REG_PORT_OUTSET1 |= pin_bit;
+            REG_PORT_OUTSET1 = pin_bit;
             break;
             
             default:
@@ -145,14 +145,14 @@ void gpio_set_pin_level(uint32_t pin, eGpioLevel level)
 */
 void gpio_toggle_pin_level(uint32_t pin)
 {
-    eGpioPortLetter gpio_port = GPIO_PORT_A;
-    uint32_t pin_bit;
+    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+    volatile uint32_t pin_bit = 0;
     
     // Check to see if the pin is on port B: set an offset & move pin number
     if (pin >= GPIO_PORT_PIN_OFFSET)
     {
         gpio_port = GPIO_PORT_B;
-        pin = GPIO_PORT_PIN_OFFSET - pin;
+        pin -= GPIO_PORT_PIN_OFFSET;
     }
     
     pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
@@ -160,11 +160,11 @@ void gpio_toggle_pin_level(uint32_t pin)
     switch (gpio_port)
     {
         case GPIO_PORT_A:
-            REG_PORT_OUTTGL0 |= pin_bit;
+            REG_PORT_OUTTGL0 = pin_bit;
         break;
          
         case GPIO_PORT_B:
-            REG_PORT_OUTTGL1 |= pin_bit;
+            REG_PORT_OUTTGL1 = pin_bit;
         break;
          
         default:
@@ -178,15 +178,15 @@ void gpio_toggle_pin_level(uint32_t pin)
 */
 eGpioLevel gpio_get_pin_level(uint32_t pin)
 {
-    eGpioLevel gpio_level;
-    eGpioPortLetter gpio_port = GPIO_PORT_A;
-    uint32_t pin_bit;
+    volatile eGpioLevel gpio_level;
+    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+    volatile uint32_t pin_bit = 0;
     
     // Check to see if the pin is on port B: set an offset & move pin number
     if (pin >= GPIO_PORT_PIN_OFFSET)
     {
         gpio_port = GPIO_PORT_B;
-        pin = GPIO_PORT_PIN_OFFSET - pin;
+        pin -= GPIO_PORT_PIN_OFFSET;
     }
     
     pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change

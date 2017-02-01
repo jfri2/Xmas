@@ -1,0 +1,1390 @@
+
+Snowflake.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000834  00000000  00000000  00010000  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .relocate     00000430  20000000  00000834  00020000  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .lpram        00000000  30000000  30000000  00020430  2**0
+                  CONTENTS
+  3 .bss          00000030  20000430  00000c64  00020430  2**2
+                  ALLOC
+  4 .stack        00002000  20000460  00000c94  00020430  2**0
+                  ALLOC
+  5 .ARM.attributes 00000028  00000000  00000000  00020430  2**0
+                  CONTENTS, READONLY
+  6 .comment      00000059  00000000  00000000  00020458  2**0
+                  CONTENTS, READONLY
+  7 .debug_info   000022b6  00000000  00000000  000204b1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000008ce  00000000  00000000  00022767  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_loc    00000224  00000000  00000000  00023035  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_aranges 00000170  00000000  00000000  00023259  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000d0  00000000  00000000  000233c9  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_macro  00015b3e  00000000  00000000  00023499  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_line   00004ad9  00000000  00000000  00038fd7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_str    0007e9b9  00000000  00000000  0003dab0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_frame  0000034c  00000000  00000000  000bc46c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <_sfixed>:
+   0:	20002460 	.word	0x20002460
+   4:	000001a1 	.word	0x000001a1
+   8:	0000019d 	.word	0x0000019d
+   c:	0000019d 	.word	0x0000019d
+	...
+  2c:	0000019d 	.word	0x0000019d
+	...
+  38:	0000019d 	.word	0x0000019d
+  3c:	0000019d 	.word	0x0000019d
+  40:	0000019d 	.word	0x0000019d
+  44:	0000019d 	.word	0x0000019d
+  48:	0000019d 	.word	0x0000019d
+  4c:	0000019d 	.word	0x0000019d
+  50:	0000019d 	.word	0x0000019d
+  54:	0000019d 	.word	0x0000019d
+  58:	0000019d 	.word	0x0000019d
+  5c:	0000019d 	.word	0x0000019d
+  60:	0000019d 	.word	0x0000019d
+  64:	0000019d 	.word	0x0000019d
+  68:	0000019d 	.word	0x0000019d
+  6c:	0000019d 	.word	0x0000019d
+  70:	0000019d 	.word	0x0000019d
+  74:	0000019d 	.word	0x0000019d
+  78:	0000019d 	.word	0x0000019d
+  7c:	0000019d 	.word	0x0000019d
+  80:	0000019d 	.word	0x0000019d
+  84:	0000019d 	.word	0x0000019d
+  88:	0000019d 	.word	0x0000019d
+  8c:	0000019d 	.word	0x0000019d
+  90:	0000019d 	.word	0x0000019d
+  94:	0000019d 	.word	0x0000019d
+  98:	0000019d 	.word	0x0000019d
+  9c:	0000019d 	.word	0x0000019d
+  a0:	0000019d 	.word	0x0000019d
+  a4:	0000019d 	.word	0x0000019d
+  a8:	0000019d 	.word	0x0000019d
+  ac:	0000019d 	.word	0x0000019d
+  b0:	00000000 	.word	0x00000000
+
+000000b4 <__do_global_dtors_aux>:
+  b4:	b510      	push	{r4, lr}
+  b6:	4c06      	ldr	r4, [pc, #24]	; (d0 <__do_global_dtors_aux+0x1c>)
+  b8:	7823      	ldrb	r3, [r4, #0]
+  ba:	2b00      	cmp	r3, #0
+  bc:	d107      	bne.n	ce <__do_global_dtors_aux+0x1a>
+  be:	4b05      	ldr	r3, [pc, #20]	; (d4 <__do_global_dtors_aux+0x20>)
+  c0:	2b00      	cmp	r3, #0
+  c2:	d002      	beq.n	ca <__do_global_dtors_aux+0x16>
+  c4:	4804      	ldr	r0, [pc, #16]	; (d8 <__do_global_dtors_aux+0x24>)
+  c6:	e000      	b.n	ca <__do_global_dtors_aux+0x16>
+  c8:	bf00      	nop
+  ca:	2301      	movs	r3, #1
+  cc:	7023      	strb	r3, [r4, #0]
+  ce:	bd10      	pop	{r4, pc}
+  d0:	20000430 	.word	0x20000430
+  d4:	00000000 	.word	0x00000000
+  d8:	00000834 	.word	0x00000834
+
+000000dc <frame_dummy>:
+  dc:	4b08      	ldr	r3, [pc, #32]	; (100 <frame_dummy+0x24>)
+  de:	b510      	push	{r4, lr}
+  e0:	2b00      	cmp	r3, #0
+  e2:	d003      	beq.n	ec <frame_dummy+0x10>
+  e4:	4907      	ldr	r1, [pc, #28]	; (104 <frame_dummy+0x28>)
+  e6:	4808      	ldr	r0, [pc, #32]	; (108 <frame_dummy+0x2c>)
+  e8:	e000      	b.n	ec <frame_dummy+0x10>
+  ea:	bf00      	nop
+  ec:	4807      	ldr	r0, [pc, #28]	; (10c <frame_dummy+0x30>)
+  ee:	6803      	ldr	r3, [r0, #0]
+  f0:	2b00      	cmp	r3, #0
+  f2:	d100      	bne.n	f6 <frame_dummy+0x1a>
+  f4:	bd10      	pop	{r4, pc}
+  f6:	4b06      	ldr	r3, [pc, #24]	; (110 <frame_dummy+0x34>)
+  f8:	2b00      	cmp	r3, #0
+  fa:	d0fb      	beq.n	f4 <frame_dummy+0x18>
+  fc:	4798      	blx	r3
+  fe:	e7f9      	b.n	f4 <frame_dummy+0x18>
+ 100:	00000000 	.word	0x00000000
+ 104:	20000434 	.word	0x20000434
+ 108:	00000834 	.word	0x00000834
+ 10c:	00000834 	.word	0x00000834
+ 110:	00000000 	.word	0x00000000
+
+00000114 <util_init>:
+*/
+
+#include "common.h"
+
+void util_init(void)
+{
+ 114:	b570      	push	{r4, r5, r6, lr}
+// Init Global structs
+    gpio_output_cfg_low = (sGpioPinConfig)
+ 116:	4e0d      	ldr	r6, [pc, #52]	; (14c <util_init+0x38>)
+ 118:	2204      	movs	r2, #4
+ 11a:	2100      	movs	r1, #0
+ 11c:	0030      	movs	r0, r6
+ 11e:	4c0c      	ldr	r4, [pc, #48]	; (150 <util_init+0x3c>)
+ 120:	47a0      	blx	r4
+ 122:	2501      	movs	r5, #1
+ 124:	7035      	strb	r5, [r6, #0]
+    {
+        .pin_type = OUTPUT,
+        .default_drive = LOW
+    };
+
+    gpio_output_cfg_high = (sGpioPinConfig)
+ 126:	4e0b      	ldr	r6, [pc, #44]	; (154 <util_init+0x40>)
+ 128:	2204      	movs	r2, #4
+ 12a:	2100      	movs	r1, #0
+ 12c:	0030      	movs	r0, r6
+ 12e:	47a0      	blx	r4
+ 130:	7035      	strb	r5, [r6, #0]
+ 132:	7075      	strb	r5, [r6, #1]
+    {
+        .pin_type = OUTPUT,
+        .default_drive = HIGH
+    };
+
+    gpio_input_cfg_pullup = (sGpioPinConfig)
+ 134:	4e08      	ldr	r6, [pc, #32]	; (158 <util_init+0x44>)
+ 136:	2204      	movs	r2, #4
+ 138:	2100      	movs	r1, #0
+ 13a:	0030      	movs	r0, r6
+ 13c:	47a0      	blx	r4
+ 13e:	70b5      	strb	r5, [r6, #2]
+    {
+        .pin_type = INPUT,
+        .pull = PULLUP
+    };
+
+    gpio_input_cfg_highz = (sGpioPinConfig)
+ 140:	2204      	movs	r2, #4
+ 142:	2100      	movs	r1, #0
+ 144:	4805      	ldr	r0, [pc, #20]	; (15c <util_init+0x48>)
+ 146:	47a0      	blx	r4
+    {
+        .pin_type = INPUT,
+        .pull = HIGHZ
+    }; 
+}
+ 148:	bd70      	pop	{r4, r5, r6, pc}
+ 14a:	46c0      	nop			; (mov r8, r8)
+ 14c:	20000450 	.word	0x20000450
+ 150:	0000064d 	.word	0x0000064d
+ 154:	20000454 	.word	0x20000454
+ 158:	2000045c 	.word	0x2000045c
+ 15c:	20000458 	.word	0x20000458
+
+00000160 <delay_cycles>:
+
+void delay_cycles(uint64_t cycles)
+{
+ 160:	b530      	push	{r4, r5, lr}
+ 162:	b083      	sub	sp, #12
+    for (volatile uint64_t i = 0; i < cycles; i++);
+ 164:	2200      	movs	r2, #0
+ 166:	2300      	movs	r3, #0
+ 168:	9200      	str	r2, [sp, #0]
+ 16a:	9301      	str	r3, [sp, #4]
+ 16c:	9a00      	ldr	r2, [sp, #0]
+ 16e:	9b01      	ldr	r3, [sp, #4]
+ 170:	4299      	cmp	r1, r3
+ 172:	d802      	bhi.n	17a <delay_cycles+0x1a>
+ 174:	d110      	bne.n	198 <delay_cycles+0x38>
+ 176:	4290      	cmp	r0, r2
+ 178:	d90e      	bls.n	198 <delay_cycles+0x38>
+ 17a:	2401      	movs	r4, #1
+ 17c:	2500      	movs	r5, #0
+ 17e:	9a00      	ldr	r2, [sp, #0]
+ 180:	9b01      	ldr	r3, [sp, #4]
+ 182:	1912      	adds	r2, r2, r4
+ 184:	416b      	adcs	r3, r5
+ 186:	9200      	str	r2, [sp, #0]
+ 188:	9301      	str	r3, [sp, #4]
+ 18a:	9a00      	ldr	r2, [sp, #0]
+ 18c:	9b01      	ldr	r3, [sp, #4]
+ 18e:	4299      	cmp	r1, r3
+ 190:	d8f5      	bhi.n	17e <delay_cycles+0x1e>
+ 192:	d101      	bne.n	198 <delay_cycles+0x38>
+ 194:	4290      	cmp	r0, r2
+ 196:	d8f2      	bhi.n	17e <delay_cycles+0x1e>
+ 198:	b003      	add	sp, #12
+ 19a:	bd30      	pop	{r4, r5, pc}
+
+0000019c <Dummy_Handler>:
+
+/**
+ * \brief Default interrupt handler for unused IRQs.
+ */
+void Dummy_Handler(void)
+{
+ 19c:	e7fe      	b.n	19c <Dummy_Handler>
+ 19e:	46c0      	nop			; (mov r8, r8)
+
+000001a0 <Reset_Handler>:
+/**
+ * \brief This is the code that gets called on processor reset.
+ * To initialize the device, and call the main() routine.
+ */
+void Reset_Handler(void)
+{
+ 1a0:	b510      	push	{r4, lr}
+
+        /* Initialize the relocate segment */
+        pSrc = &_etext;
+        pDest = &_srelocate;
+
+        if (pSrc != pDest) {
+ 1a2:	4b1d      	ldr	r3, [pc, #116]	; (218 <Reset_Handler+0x78>)
+ 1a4:	4a1d      	ldr	r2, [pc, #116]	; (21c <Reset_Handler+0x7c>)
+ 1a6:	429a      	cmp	r2, r3
+ 1a8:	d003      	beq.n	1b2 <Reset_Handler+0x12>
+                for (; pDest < &_erelocate;) {
+ 1aa:	4b1d      	ldr	r3, [pc, #116]	; (220 <Reset_Handler+0x80>)
+ 1ac:	4a1a      	ldr	r2, [pc, #104]	; (218 <Reset_Handler+0x78>)
+ 1ae:	429a      	cmp	r2, r3
+ 1b0:	d304      	bcc.n	1bc <Reset_Handler+0x1c>
+                        *pDest++ = *pSrc++;
+                }
+        }
+
+        /* Clear the zero segment */
+        for (pDest = &_szero; pDest < &_ezero;) {
+ 1b2:	4b1c      	ldr	r3, [pc, #112]	; (224 <Reset_Handler+0x84>)
+ 1b4:	4a1c      	ldr	r2, [pc, #112]	; (228 <Reset_Handler+0x88>)
+ 1b6:	429a      	cmp	r2, r3
+ 1b8:	d310      	bcc.n	1dc <Reset_Handler+0x3c>
+ 1ba:	e01e      	b.n	1fa <Reset_Handler+0x5a>
+ 1bc:	4a1b      	ldr	r2, [pc, #108]	; (22c <Reset_Handler+0x8c>)
+ 1be:	4b18      	ldr	r3, [pc, #96]	; (220 <Reset_Handler+0x80>)
+ 1c0:	3303      	adds	r3, #3
+ 1c2:	1a9b      	subs	r3, r3, r2
+ 1c4:	089b      	lsrs	r3, r3, #2
+ 1c6:	3301      	adds	r3, #1
+ 1c8:	009b      	lsls	r3, r3, #2
+        /* Initialize the relocate segment */
+        pSrc = &_etext;
+        pDest = &_srelocate;
+
+        if (pSrc != pDest) {
+                for (; pDest < &_erelocate;) {
+ 1ca:	2200      	movs	r2, #0
+                        *pDest++ = *pSrc++;
+ 1cc:	4812      	ldr	r0, [pc, #72]	; (218 <Reset_Handler+0x78>)
+ 1ce:	4913      	ldr	r1, [pc, #76]	; (21c <Reset_Handler+0x7c>)
+ 1d0:	588c      	ldr	r4, [r1, r2]
+ 1d2:	5084      	str	r4, [r0, r2]
+ 1d4:	3204      	adds	r2, #4
+        /* Initialize the relocate segment */
+        pSrc = &_etext;
+        pDest = &_srelocate;
+
+        if (pSrc != pDest) {
+                for (; pDest < &_erelocate;) {
+ 1d6:	429a      	cmp	r2, r3
+ 1d8:	d1fa      	bne.n	1d0 <Reset_Handler+0x30>
+ 1da:	e7ea      	b.n	1b2 <Reset_Handler+0x12>
+ 1dc:	4a14      	ldr	r2, [pc, #80]	; (230 <Reset_Handler+0x90>)
+ 1de:	4b11      	ldr	r3, [pc, #68]	; (224 <Reset_Handler+0x84>)
+ 1e0:	3303      	adds	r3, #3
+ 1e2:	1a9b      	subs	r3, r3, r2
+ 1e4:	089b      	lsrs	r3, r3, #2
+ 1e6:	3301      	adds	r3, #1
+ 1e8:	009b      	lsls	r3, r3, #2
+                        *pDest++ = *pSrc++;
+                }
+        }
+
+        /* Clear the zero segment */
+        for (pDest = &_szero; pDest < &_ezero;) {
+ 1ea:	2200      	movs	r2, #0
+                *pDest++ = 0;
+ 1ec:	480e      	ldr	r0, [pc, #56]	; (228 <Reset_Handler+0x88>)
+ 1ee:	2100      	movs	r1, #0
+ 1f0:	1814      	adds	r4, r2, r0
+ 1f2:	6021      	str	r1, [r4, #0]
+ 1f4:	3204      	adds	r2, #4
+                        *pDest++ = *pSrc++;
+                }
+        }
+
+        /* Clear the zero segment */
+        for (pDest = &_szero; pDest < &_ezero;) {
+ 1f6:	429a      	cmp	r2, r3
+ 1f8:	d1fa      	bne.n	1f0 <Reset_Handler+0x50>
+                *pDest++ = 0;
+        }
+
+        /* Set the vector table base address */
+        pSrc = (uint32_t *) & _sfixed;
+        SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
+ 1fa:	4a0e      	ldr	r2, [pc, #56]	; (234 <Reset_Handler+0x94>)
+ 1fc:	21ff      	movs	r1, #255	; 0xff
+ 1fe:	4b0e      	ldr	r3, [pc, #56]	; (238 <Reset_Handler+0x98>)
+ 200:	438b      	bics	r3, r1
+ 202:	6093      	str	r3, [r2, #8]
+
+        /* Overwriting the default value of the NVMCTRL.CTRLB.MANW bit (errata reference 13134) */
+        NVMCTRL->CTRLB.bit.MANW = 1;
+ 204:	4a0d      	ldr	r2, [pc, #52]	; (23c <Reset_Handler+0x9c>)
+ 206:	6851      	ldr	r1, [r2, #4]
+ 208:	2380      	movs	r3, #128	; 0x80
+ 20a:	430b      	orrs	r3, r1
+ 20c:	6053      	str	r3, [r2, #4]
+
+        /* Initialize the C library */
+        __libc_init_array();
+ 20e:	4b0c      	ldr	r3, [pc, #48]	; (240 <Reset_Handler+0xa0>)
+ 210:	4798      	blx	r3
+
+        /* Branch to main function */
+        main();
+ 212:	4b0c      	ldr	r3, [pc, #48]	; (244 <Reset_Handler+0xa4>)
+ 214:	4798      	blx	r3
+ 216:	e7fe      	b.n	216 <Reset_Handler+0x76>
+ 218:	20000000 	.word	0x20000000
+ 21c:	00000834 	.word	0x00000834
+ 220:	20000430 	.word	0x20000430
+ 224:	20000460 	.word	0x20000460
+ 228:	20000430 	.word	0x20000430
+ 22c:	20000004 	.word	0x20000004
+ 230:	20000434 	.word	0x20000434
+ 234:	e000ed00 	.word	0xe000ed00
+ 238:	00000000 	.word	0x00000000
+ 23c:	41004000 	.word	0x41004000
+ 240:	00000605 	.word	0x00000605
+ 244:	0000046d 	.word	0x0000046d
+
+00000248 <SystemInit>:
+ *         Initialize the System and update the SystemCoreClock variable.
+ */
+void SystemInit(void)
+{
+	// Keep the default device state after reset
+	SystemCoreClock = __SYSTEM_CLOCK;           
+ 248:	4a01      	ldr	r2, [pc, #4]	; (250 <SystemInit+0x8>)
+ 24a:	4b02      	ldr	r3, [pc, #8]	; (254 <SystemInit+0xc>)
+ 24c:	601a      	str	r2, [r3, #0]
+}
+ 24e:	4770      	bx	lr
+ 250:	003d0900 	.word	0x003d0900
+ 254:	20000000 	.word	0x20000000
+
+00000258 <gpio_pin_config>:
+/*!
+* @brief @todo
+* @return void
+*/
+void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+{
+ 258:	b086      	sub	sp, #24
+    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+ 25a:	2300      	movs	r3, #0
+ 25c:	2217      	movs	r2, #23
+ 25e:	446a      	add	r2, sp
+ 260:	7013      	strb	r3, [r2, #0]
+    volatile uint32_t pin_bit;
+    volatile uint32_t dirclr = 0x0000;
+ 262:	9303      	str	r3, [sp, #12]
+    volatile uint32_t dirset = 0x0000;
+ 264:	9302      	str	r3, [sp, #8]
+    volatile uint32_t outclr = 0x0000;
+ 266:	9301      	str	r3, [sp, #4]
+    volatile uint32_t outset = 0x0000;
+ 268:	9300      	str	r3, [sp, #0]
+    
+    // Check to see if the pin is on port B: set an offset & move pin number
+    if (pin >= GPIO_PORT_PIN_OFFSET)
+ 26a:	281f      	cmp	r0, #31
+ 26c:	d904      	bls.n	278 <gpio_pin_config+0x20>
+    {
+        gpio_port = GPIO_PORT_B;   
+ 26e:	2201      	movs	r2, #1
+ 270:	3317      	adds	r3, #23
+ 272:	446b      	add	r3, sp
+ 274:	701a      	strb	r2, [r3, #0]
+        pin -= GPIO_PORT_PIN_OFFSET;
+ 276:	3820      	subs	r0, #32
+    }
+    
+    pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
+ 278:	2301      	movs	r3, #1
+ 27a:	4083      	lsls	r3, r0
+ 27c:	9304      	str	r3, [sp, #16]
+
+
+    switch (config->pin_type)
+ 27e:	780b      	ldrb	r3, [r1, #0]
+ 280:	2b00      	cmp	r3, #0
+ 282:	d002      	beq.n	28a <gpio_pin_config+0x32>
+ 284:	2b01      	cmp	r3, #1
+ 286:	d00f      	beq.n	2a8 <gpio_pin_config+0x50>
+ 288:	e01c      	b.n	2c4 <gpio_pin_config+0x6c>
+    {
+        case INPUT:
+            dirclr |= pin_bit;                  // set pin to input
+ 28a:	9a04      	ldr	r2, [sp, #16]
+ 28c:	9b03      	ldr	r3, [sp, #12]
+ 28e:	4313      	orrs	r3, r2
+ 290:	9303      	str	r3, [sp, #12]
+            if (config->pull == PULLUP)
+ 292:	788b      	ldrb	r3, [r1, #2]
+ 294:	2b01      	cmp	r3, #1
+ 296:	d102      	bne.n	29e <gpio_pin_config+0x46>
+            {
+                outset = pin_bit;              // set pin as pullup
+ 298:	9b04      	ldr	r3, [sp, #16]
+ 29a:	9300      	str	r3, [sp, #0]
+ 29c:	e012      	b.n	2c4 <gpio_pin_config+0x6c>
+            } 
+            else if (config->pull == HIGHZ) {
+ 29e:	2b00      	cmp	r3, #0
+ 2a0:	d110      	bne.n	2c4 <gpio_pin_config+0x6c>
+                outclr = pin_bit;              // set pin as HIGHZ
+ 2a2:	9b04      	ldr	r3, [sp, #16]
+ 2a4:	9301      	str	r3, [sp, #4]
+ 2a6:	e00d      	b.n	2c4 <gpio_pin_config+0x6c>
+            }
+        break;
+        
+        case OUTPUT:
+            dirset |= pin_bit;                  // set pin to output
+ 2a8:	9a04      	ldr	r2, [sp, #16]
+ 2aa:	9b02      	ldr	r3, [sp, #8]
+ 2ac:	4313      	orrs	r3, r2
+ 2ae:	9302      	str	r3, [sp, #8]
+            if (config->default_drive == HIGH)
+ 2b0:	784b      	ldrb	r3, [r1, #1]
+ 2b2:	2b01      	cmp	r3, #1
+ 2b4:	d102      	bne.n	2bc <gpio_pin_config+0x64>
+            {
+                outset = pin_bit;              // set output high
+ 2b6:	9b04      	ldr	r3, [sp, #16]
+ 2b8:	9300      	str	r3, [sp, #0]
+ 2ba:	e003      	b.n	2c4 <gpio_pin_config+0x6c>
+            } 
+            else if (config->default_drive == LOW) {
+ 2bc:	2b00      	cmp	r3, #0
+ 2be:	d101      	bne.n	2c4 <gpio_pin_config+0x6c>
+                outclr = pin_bit;              // set output low
+ 2c0:	9b04      	ldr	r3, [sp, #16]
+ 2c2:	9301      	str	r3, [sp, #4]
+        default:
+        break;
+    }
+    
+    // Apply all changes to appropriate registers
+    switch (gpio_port)
+ 2c4:	2317      	movs	r3, #23
+ 2c6:	446b      	add	r3, sp
+ 2c8:	781b      	ldrb	r3, [r3, #0]
+ 2ca:	b2db      	uxtb	r3, r3
+ 2cc:	2b00      	cmp	r3, #0
+ 2ce:	d002      	beq.n	2d6 <gpio_pin_config+0x7e>
+ 2d0:	2b01      	cmp	r3, #1
+ 2d2:	d00d      	beq.n	2f0 <gpio_pin_config+0x98>
+ 2d4:	e018      	b.n	308 <gpio_pin_config+0xb0>
+    {
+        case GPIO_PORT_A:
+            REG_PORT_DIRCLR0 = dirclr;
+ 2d6:	9a03      	ldr	r2, [sp, #12]
+ 2d8:	4b0c      	ldr	r3, [pc, #48]	; (30c <gpio_pin_config+0xb4>)
+ 2da:	601a      	str	r2, [r3, #0]
+            REG_PORT_DIRSET0 = dirset;
+ 2dc:	9a02      	ldr	r2, [sp, #8]
+ 2de:	4b0c      	ldr	r3, [pc, #48]	; (310 <gpio_pin_config+0xb8>)
+ 2e0:	601a      	str	r2, [r3, #0]
+            REG_PORT_OUTCLR0 = outclr;
+ 2e2:	9a01      	ldr	r2, [sp, #4]
+ 2e4:	4b0b      	ldr	r3, [pc, #44]	; (314 <gpio_pin_config+0xbc>)
+ 2e6:	601a      	str	r2, [r3, #0]
+            REG_PORT_OUTSET0 = outset;
+ 2e8:	9a00      	ldr	r2, [sp, #0]
+ 2ea:	4b0b      	ldr	r3, [pc, #44]	; (318 <gpio_pin_config+0xc0>)
+ 2ec:	601a      	str	r2, [r3, #0]
+        break;
+ 2ee:	e00b      	b.n	308 <gpio_pin_config+0xb0>
+        
+        case GPIO_PORT_B:
+            REG_PORT_DIRCLR1 = dirclr;
+ 2f0:	9a03      	ldr	r2, [sp, #12]
+ 2f2:	4b0a      	ldr	r3, [pc, #40]	; (31c <gpio_pin_config+0xc4>)
+ 2f4:	601a      	str	r2, [r3, #0]
+            REG_PORT_DIRSET1 = dirset;
+ 2f6:	9a02      	ldr	r2, [sp, #8]
+ 2f8:	4b09      	ldr	r3, [pc, #36]	; (320 <gpio_pin_config+0xc8>)
+ 2fa:	601a      	str	r2, [r3, #0]
+            REG_PORT_OUTCLR1 = outclr;
+ 2fc:	9a01      	ldr	r2, [sp, #4]
+ 2fe:	4b09      	ldr	r3, [pc, #36]	; (324 <gpio_pin_config+0xcc>)
+ 300:	601a      	str	r2, [r3, #0]
+            REG_PORT_OUTSET1 = outset;
+ 302:	9a00      	ldr	r2, [sp, #0]
+ 304:	4b08      	ldr	r3, [pc, #32]	; (328 <gpio_pin_config+0xd0>)
+ 306:	601a      	str	r2, [r3, #0]
+        break;
+        
+        default:
+        break;
+    }
+}
+ 308:	b006      	add	sp, #24
+ 30a:	4770      	bx	lr
+ 30c:	40002804 	.word	0x40002804
+ 310:	40002808 	.word	0x40002808
+ 314:	40002814 	.word	0x40002814
+ 318:	40002818 	.word	0x40002818
+ 31c:	40002884 	.word	0x40002884
+ 320:	40002888 	.word	0x40002888
+ 324:	40002894 	.word	0x40002894
+ 328:	40002898 	.word	0x40002898
+
+0000032c <gpio_set_pin_level>:
+/*!
+* @brief @todo
+* @return void
+*/
+void gpio_set_pin_level(uint32_t pin, eGpioLevel level)
+{
+ 32c:	b082      	sub	sp, #8
+    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+ 32e:	2300      	movs	r3, #0
+ 330:	466a      	mov	r2, sp
+ 332:	71d3      	strb	r3, [r2, #7]
+    volatile uint32_t pin_bit = 0;
+ 334:	9300      	str	r3, [sp, #0]
+    
+    // Check to see if the pin is on port B: set an offset & move pin number
+    if (pin >= GPIO_PORT_PIN_OFFSET)
+ 336:	281f      	cmp	r0, #31
+ 338:	d903      	bls.n	342 <gpio_set_pin_level+0x16>
+    {
+        gpio_port = GPIO_PORT_B;
+ 33a:	2201      	movs	r2, #1
+ 33c:	466b      	mov	r3, sp
+ 33e:	71da      	strb	r2, [r3, #7]
+        pin -= GPIO_PORT_PIN_OFFSET;
+ 340:	3820      	subs	r0, #32
+    }
+    
+    pin_bit = 0x0000 | (1 << pin);  // Mask just pin # in bitfield to change
+ 342:	2301      	movs	r3, #1
+ 344:	4083      	lsls	r3, r0
+ 346:	9300      	str	r3, [sp, #0]
+    
+    if (level == LOW) 
+ 348:	2900      	cmp	r1, #0
+ 34a:	d110      	bne.n	36e <gpio_set_pin_level+0x42>
+    {
+        switch (gpio_port)
+ 34c:	466b      	mov	r3, sp
+ 34e:	3307      	adds	r3, #7
+ 350:	781b      	ldrb	r3, [r3, #0]
+ 352:	b2db      	uxtb	r3, r3
+ 354:	2b00      	cmp	r3, #0
+ 356:	d002      	beq.n	35e <gpio_set_pin_level+0x32>
+ 358:	2b01      	cmp	r3, #1
+ 35a:	d004      	beq.n	366 <gpio_set_pin_level+0x3a>
+ 35c:	e019      	b.n	392 <gpio_set_pin_level+0x66>
+        {
+            case GPIO_PORT_A:
+            REG_PORT_OUTCLR0 = pin_bit;
+ 35e:	9a00      	ldr	r2, [sp, #0]
+ 360:	4b0d      	ldr	r3, [pc, #52]	; (398 <gpio_set_pin_level+0x6c>)
+ 362:	601a      	str	r2, [r3, #0]
+            break;
+ 364:	e015      	b.n	392 <gpio_set_pin_level+0x66>
+            
+            case GPIO_PORT_B:
+            REG_PORT_OUTCLR1 = pin_bit;
+ 366:	9a00      	ldr	r2, [sp, #0]
+ 368:	4b0c      	ldr	r3, [pc, #48]	; (39c <gpio_set_pin_level+0x70>)
+ 36a:	601a      	str	r2, [r3, #0]
+            break;
+ 36c:	e011      	b.n	392 <gpio_set_pin_level+0x66>
+            
+            default:
+            break;
+        }
+    } 
+    else if (level == HIGH)
+ 36e:	2901      	cmp	r1, #1
+ 370:	d10f      	bne.n	392 <gpio_set_pin_level+0x66>
+    {
+        switch (gpio_port)
+ 372:	466b      	mov	r3, sp
+ 374:	3307      	adds	r3, #7
+ 376:	781b      	ldrb	r3, [r3, #0]
+ 378:	b2db      	uxtb	r3, r3
+ 37a:	2b00      	cmp	r3, #0
+ 37c:	d002      	beq.n	384 <gpio_set_pin_level+0x58>
+ 37e:	2b01      	cmp	r3, #1
+ 380:	d004      	beq.n	38c <gpio_set_pin_level+0x60>
+ 382:	e006      	b.n	392 <gpio_set_pin_level+0x66>
+        {
+            case GPIO_PORT_A:
+            REG_PORT_OUTSET0 = pin_bit;
+ 384:	9a00      	ldr	r2, [sp, #0]
+ 386:	4b06      	ldr	r3, [pc, #24]	; (3a0 <gpio_set_pin_level+0x74>)
+ 388:	601a      	str	r2, [r3, #0]
+            break;
+ 38a:	e002      	b.n	392 <gpio_set_pin_level+0x66>
+            
+            case GPIO_PORT_B:
+            REG_PORT_OUTSET1 = pin_bit;
+ 38c:	9a00      	ldr	r2, [sp, #0]
+ 38e:	4b05      	ldr	r3, [pc, #20]	; (3a4 <gpio_set_pin_level+0x78>)
+ 390:	601a      	str	r2, [r3, #0]
+            
+            default:
+            break;
+        }
+    }        
+}
+ 392:	b002      	add	sp, #8
+ 394:	4770      	bx	lr
+ 396:	46c0      	nop			; (mov r8, r8)
+ 398:	40002814 	.word	0x40002814
+ 39c:	40002894 	.word	0x40002894
+ 3a0:	40002818 	.word	0x40002818
+ 3a4:	40002898 	.word	0x40002898
+
+000003a8 <audio_init>:
+/*!
+* @brief @todo
+* @return void
+*/
+void audio_init(void)
+{   
+ 3a8:	b510      	push	{r4, lr}
+    // Configure amplifier & audio related discretes as outputs. Turn them off
+    gpio_pin_config(AMP_SHDN_PIN, &gpio_output_cfg_high);
+ 3aa:	4904      	ldr	r1, [pc, #16]	; (3bc <audio_init+0x14>)
+ 3ac:	2024      	movs	r0, #36	; 0x24
+ 3ae:	4c04      	ldr	r4, [pc, #16]	; (3c0 <audio_init+0x18>)
+ 3b0:	47a0      	blx	r4
+    gpio_pin_config(VREF_PIN, &gpio_output_cfg_low);
+ 3b2:	4904      	ldr	r1, [pc, #16]	; (3c4 <audio_init+0x1c>)
+ 3b4:	2003      	movs	r0, #3
+ 3b6:	47a0      	blx	r4
+}
+ 3b8:	bd10      	pop	{r4, pc}
+ 3ba:	46c0      	nop			; (mov r8, r8)
+ 3bc:	20000454 	.word	0x20000454
+ 3c0:	00000259 	.word	0x00000259
+ 3c4:	20000450 	.word	0x20000450
+
+000003c8 <flash_init>:
+/*!
+* @brief @todo
+* @return void
+*/
+void flash_init(void)
+{
+ 3c8:	b570      	push	{r4, r5, r6, lr}
+    // Configure flash discretes as outputs and inactive
+    gpio_pin_config(FLASH_CS_PIN, &gpio_output_cfg_high);
+ 3ca:	4d06      	ldr	r5, [pc, #24]	; (3e4 <flash_init+0x1c>)
+ 3cc:	0029      	movs	r1, r5
+ 3ce:	2020      	movs	r0, #32
+ 3d0:	4c05      	ldr	r4, [pc, #20]	; (3e8 <flash_init+0x20>)
+ 3d2:	47a0      	blx	r4
+    gpio_pin_config(FLASH_HOLD_PIN, &gpio_output_cfg_high);
+ 3d4:	0029      	movs	r1, r5
+ 3d6:	203f      	movs	r0, #63	; 0x3f
+ 3d8:	47a0      	blx	r4
+    gpio_pin_config(FLASH_WP_PIN, &gpio_output_cfg_high);
+ 3da:	0029      	movs	r1, r5
+ 3dc:	203e      	movs	r0, #62	; 0x3e
+ 3de:	47a0      	blx	r4
+}
+ 3e0:	bd70      	pop	{r4, r5, r6, pc}
+ 3e2:	46c0      	nop			; (mov r8, r8)
+ 3e4:	20000454 	.word	0x20000454
+ 3e8:	00000259 	.word	0x00000259
+
+000003ec <led_init>:
+/*!
+* @brief todo
+* @return void
+*/
+void led_init(void)
+{        
+ 3ec:	b570      	push	{r4, r5, r6, lr}
+    // Configure LEDs as outputs & set low
+    gpio_pin_config(LED_R1_PIN, &gpio_output_cfg_low);
+ 3ee:	4d13      	ldr	r5, [pc, #76]	; (43c <led_init+0x50>)
+ 3f0:	0029      	movs	r1, r5
+ 3f2:	2007      	movs	r0, #7
+ 3f4:	4c12      	ldr	r4, [pc, #72]	; (440 <led_init+0x54>)
+ 3f6:	47a0      	blx	r4
+    gpio_pin_config(LED_G1_PIN, &gpio_output_cfg_low);
+ 3f8:	0029      	movs	r1, r5
+ 3fa:	2006      	movs	r0, #6
+ 3fc:	47a0      	blx	r4
+    gpio_pin_config(LED_R2_PIN, &gpio_output_cfg_low);
+ 3fe:	0029      	movs	r1, r5
+ 400:	2029      	movs	r0, #41	; 0x29
+ 402:	47a0      	blx	r4
+    gpio_pin_config(LED_G2_PIN, &gpio_output_cfg_low);
+ 404:	0029      	movs	r1, r5
+ 406:	2028      	movs	r0, #40	; 0x28
+ 408:	47a0      	blx	r4
+    gpio_pin_config(LED_R3_PIN, &gpio_output_cfg_low);
+ 40a:	0029      	movs	r1, r5
+ 40c:	2009      	movs	r0, #9
+ 40e:	47a0      	blx	r4
+    gpio_pin_config(LED_G3_PIN, &gpio_output_cfg_low);
+ 410:	0029      	movs	r1, r5
+ 412:	2008      	movs	r0, #8
+ 414:	47a0      	blx	r4
+    gpio_pin_config(LED_R4_PIN, &gpio_output_cfg_low);
+ 416:	0029      	movs	r1, r5
+ 418:	200b      	movs	r0, #11
+ 41a:	47a0      	blx	r4
+    gpio_pin_config(LED_G4_PIN, &gpio_output_cfg_low);
+ 41c:	0029      	movs	r1, r5
+ 41e:	200a      	movs	r0, #10
+ 420:	47a0      	blx	r4
+    gpio_pin_config(LED_R5_PIN, &gpio_output_cfg_low);
+ 422:	0029      	movs	r1, r5
+ 424:	202d      	movs	r0, #45	; 0x2d
+ 426:	47a0      	blx	r4
+    gpio_pin_config(LED_G5_PIN, &gpio_output_cfg_low);
+ 428:	0029      	movs	r1, r5
+ 42a:	202c      	movs	r0, #44	; 0x2c
+ 42c:	47a0      	blx	r4
+    gpio_pin_config(LED_R6_PIN, &gpio_output_cfg_low);
+ 42e:	0029      	movs	r1, r5
+ 430:	202b      	movs	r0, #43	; 0x2b
+ 432:	47a0      	blx	r4
+    gpio_pin_config(LED_G6_PIN, &gpio_output_cfg_low);
+ 434:	0029      	movs	r1, r5
+ 436:	202a      	movs	r0, #42	; 0x2a
+ 438:	47a0      	blx	r4
+}
+ 43a:	bd70      	pop	{r4, r5, r6, pc}
+ 43c:	20000450 	.word	0x20000450
+ 440:	00000259 	.word	0x00000259
+
+00000444 <pb_init>:
+/*!
+* @brief @todo
+* @return void
+*/
+void pb_init(void)
+{
+ 444:	b510      	push	{r4, lr}
+    // Configure pushbutton pin as input with pullup
+    gpio_pin_config(PB_PIN, &gpio_input_cfg_pullup);
+ 446:	4902      	ldr	r1, [pc, #8]	; (450 <pb_init+0xc>)
+ 448:	201b      	movs	r0, #27
+ 44a:	4b02      	ldr	r3, [pc, #8]	; (454 <pb_init+0x10>)
+ 44c:	4798      	blx	r3
+}
+ 44e:	bd10      	pop	{r4, pc}
+ 450:	2000045c 	.word	0x2000045c
+ 454:	00000259 	.word	0x00000259
+
+00000458 <usb_app_init>:
+/*!
+* @brief @todo
+* @return void
+*/
+void usb_app_init(void)
+{    
+ 458:	b510      	push	{r4, lr}
+    // Configure USB Vbus monitor as input without pullup
+    gpio_pin_config(USB_VBUS_DET_PIN, &gpio_input_cfg_highz);
+ 45a:	4902      	ldr	r1, [pc, #8]	; (464 <usb_app_init+0xc>)
+ 45c:	2016      	movs	r0, #22
+ 45e:	4b02      	ldr	r3, [pc, #8]	; (468 <usb_app_init+0x10>)
+ 460:	4798      	blx	r3
+}
+ 462:	bd10      	pop	{r4, pc}
+ 464:	20000458 	.word	0x20000458
+ 468:	00000259 	.word	0x00000259
+
+0000046c <main>:
+} eTopState;   // Top state machine states
+    
+volatile eTopState top_state = IDLE;  
+  
+int main(void)
+{
+ 46c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+    /* Initialize the system and components */
+    SystemInit();   // Must be first called init routine
+ 46e:	4b59      	ldr	r3, [pc, #356]	; (5d4 <main+0x168>)
+ 470:	4798      	blx	r3
+    util_init();    // Must be called before library init routines
+ 472:	4b59      	ldr	r3, [pc, #356]	; (5d8 <main+0x16c>)
+ 474:	4798      	blx	r3
+    
+    // Library Init Routines    
+    audio_init();
+ 476:	4b59      	ldr	r3, [pc, #356]	; (5dc <main+0x170>)
+ 478:	4798      	blx	r3
+    flash_init();
+ 47a:	4b59      	ldr	r3, [pc, #356]	; (5e0 <main+0x174>)
+ 47c:	4798      	blx	r3
+    led_init();
+ 47e:	4b59      	ldr	r3, [pc, #356]	; (5e4 <main+0x178>)
+ 480:	4798      	blx	r3
+    pb_init();
+ 482:	4b59      	ldr	r3, [pc, #356]	; (5e8 <main+0x17c>)
+ 484:	4798      	blx	r3
+    usb_app_init();        
+ 486:	4b59      	ldr	r3, [pc, #356]	; (5ec <main+0x180>)
+ 488:	4798      	blx	r3
+    
+    // Toggle Red LEDs On
+    gpio_set_pin_level(LED_R1_PIN, HIGH);
+ 48a:	2101      	movs	r1, #1
+ 48c:	2007      	movs	r0, #7
+ 48e:	4c58      	ldr	r4, [pc, #352]	; (5f0 <main+0x184>)
+ 490:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R2_PIN, HIGH);
+ 492:	2101      	movs	r1, #1
+ 494:	2029      	movs	r0, #41	; 0x29
+ 496:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R3_PIN, HIGH);
+ 498:	2101      	movs	r1, #1
+ 49a:	2009      	movs	r0, #9
+ 49c:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R4_PIN, HIGH);
+ 49e:	2101      	movs	r1, #1
+ 4a0:	200b      	movs	r0, #11
+ 4a2:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R5_PIN, HIGH);
+ 4a4:	2101      	movs	r1, #1
+ 4a6:	202d      	movs	r0, #45	; 0x2d
+ 4a8:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R6_PIN, HIGH);
+ 4aa:	2101      	movs	r1, #1
+ 4ac:	202b      	movs	r0, #43	; 0x2b
+ 4ae:	47a0      	blx	r4
+    
+    gpio_set_pin_level(LED_R1_PIN, LOW);
+ 4b0:	2100      	movs	r1, #0
+ 4b2:	2007      	movs	r0, #7
+ 4b4:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R2_PIN, LOW);
+ 4b6:	2100      	movs	r1, #0
+ 4b8:	2029      	movs	r0, #41	; 0x29
+ 4ba:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R3_PIN, LOW);
+ 4bc:	2100      	movs	r1, #0
+ 4be:	2009      	movs	r0, #9
+ 4c0:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R4_PIN, LOW);
+ 4c2:	2100      	movs	r1, #0
+ 4c4:	200b      	movs	r0, #11
+ 4c6:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R5_PIN, LOW);
+ 4c8:	2100      	movs	r1, #0
+ 4ca:	202d      	movs	r0, #45	; 0x2d
+ 4cc:	47a0      	blx	r4
+    gpio_set_pin_level(LED_R6_PIN, LOW);
+ 4ce:	2100      	movs	r1, #0
+ 4d0:	202b      	movs	r0, #43	; 0x2b
+ 4d2:	47a0      	blx	r4
+    
+    gpio_set_pin_level(LED_G1_PIN, HIGH);
+ 4d4:	2101      	movs	r1, #1
+ 4d6:	2006      	movs	r0, #6
+ 4d8:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G2_PIN, HIGH);
+ 4da:	2101      	movs	r1, #1
+ 4dc:	2028      	movs	r0, #40	; 0x28
+ 4de:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G3_PIN, HIGH);
+ 4e0:	2101      	movs	r1, #1
+ 4e2:	2008      	movs	r0, #8
+ 4e4:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G4_PIN, HIGH);
+ 4e6:	2101      	movs	r1, #1
+ 4e8:	200a      	movs	r0, #10
+ 4ea:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G5_PIN, HIGH);
+ 4ec:	2101      	movs	r1, #1
+ 4ee:	202c      	movs	r0, #44	; 0x2c
+ 4f0:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G6_PIN, HIGH);
+ 4f2:	2101      	movs	r1, #1
+ 4f4:	202a      	movs	r0, #42	; 0x2a
+ 4f6:	47a0      	blx	r4
+    
+    gpio_set_pin_level(LED_G1_PIN, LOW);
+ 4f8:	2100      	movs	r1, #0
+ 4fa:	2006      	movs	r0, #6
+ 4fc:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G2_PIN, LOW);
+ 4fe:	2100      	movs	r1, #0
+ 500:	2028      	movs	r0, #40	; 0x28
+ 502:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G3_PIN, LOW);
+ 504:	2100      	movs	r1, #0
+ 506:	2008      	movs	r0, #8
+ 508:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G4_PIN, LOW);
+ 50a:	2100      	movs	r1, #0
+ 50c:	200a      	movs	r0, #10
+ 50e:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G5_PIN, LOW);
+ 510:	2100      	movs	r1, #0
+ 512:	202c      	movs	r0, #44	; 0x2c
+ 514:	47a0      	blx	r4
+    gpio_set_pin_level(LED_G6_PIN, LOW);    
+ 516:	2100      	movs	r1, #0
+ 518:	202a      	movs	r0, #42	; 0x2a
+ 51a:	47a0      	blx	r4
+
+    /* Application Loop */
+    while (1) 
+    {
+        // Toggle LEDs on and off
+        gpio_set_pin_level(LED_R1_PIN, HIGH);
+ 51c:	4f34      	ldr	r7, [pc, #208]	; (5f0 <main+0x184>)
+        gpio_set_pin_level(LED_R2_PIN, HIGH);
+        gpio_set_pin_level(LED_R3_PIN, HIGH);
+        gpio_set_pin_level(LED_R4_PIN, HIGH);
+        gpio_set_pin_level(LED_R5_PIN, HIGH);
+        gpio_set_pin_level(LED_R6_PIN, HIGH);
+        delay_cycles(25000);   
+ 51e:	4e35      	ldr	r6, [pc, #212]	; (5f4 <main+0x188>)
+
+    /* Application Loop */
+    while (1) 
+    {
+        // Toggle LEDs on and off
+        gpio_set_pin_level(LED_R1_PIN, HIGH);
+ 520:	2101      	movs	r1, #1
+ 522:	2007      	movs	r0, #7
+ 524:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R2_PIN, HIGH);
+ 526:	2101      	movs	r1, #1
+ 528:	2029      	movs	r0, #41	; 0x29
+ 52a:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R3_PIN, HIGH);
+ 52c:	2101      	movs	r1, #1
+ 52e:	2009      	movs	r0, #9
+ 530:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R4_PIN, HIGH);
+ 532:	2101      	movs	r1, #1
+ 534:	200b      	movs	r0, #11
+ 536:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R5_PIN, HIGH);
+ 538:	2101      	movs	r1, #1
+ 53a:	202d      	movs	r0, #45	; 0x2d
+ 53c:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R6_PIN, HIGH);
+ 53e:	2101      	movs	r1, #1
+ 540:	202b      	movs	r0, #43	; 0x2b
+ 542:	47b8      	blx	r7
+        delay_cycles(25000);   
+ 544:	482c      	ldr	r0, [pc, #176]	; (5f8 <main+0x18c>)
+ 546:	2100      	movs	r1, #0
+ 548:	47b0      	blx	r6
+        gpio_set_pin_level(LED_R1_PIN, LOW);
+ 54a:	2100      	movs	r1, #0
+ 54c:	2007      	movs	r0, #7
+ 54e:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R2_PIN, LOW);
+ 550:	2100      	movs	r1, #0
+ 552:	2029      	movs	r0, #41	; 0x29
+ 554:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R3_PIN, LOW);
+ 556:	2100      	movs	r1, #0
+ 558:	2009      	movs	r0, #9
+ 55a:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R4_PIN, LOW);
+ 55c:	2100      	movs	r1, #0
+ 55e:	200b      	movs	r0, #11
+ 560:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R5_PIN, LOW);
+ 562:	2100      	movs	r1, #0
+ 564:	202d      	movs	r0, #45	; 0x2d
+ 566:	47b8      	blx	r7
+        gpio_set_pin_level(LED_R6_PIN, LOW); 
+ 568:	2100      	movs	r1, #0
+ 56a:	202b      	movs	r0, #43	; 0x2b
+ 56c:	47b8      	blx	r7
+        delay_cycles(50000);   
+ 56e:	4c23      	ldr	r4, [pc, #140]	; (5fc <main+0x190>)
+ 570:	2500      	movs	r5, #0
+ 572:	0020      	movs	r0, r4
+ 574:	0029      	movs	r1, r5
+ 576:	47b0      	blx	r6
+        gpio_set_pin_level(LED_G1_PIN, HIGH);
+ 578:	2101      	movs	r1, #1
+ 57a:	2006      	movs	r0, #6
+ 57c:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G2_PIN, HIGH);
+ 57e:	2101      	movs	r1, #1
+ 580:	2028      	movs	r0, #40	; 0x28
+ 582:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G3_PIN, HIGH);
+ 584:	2101      	movs	r1, #1
+ 586:	2008      	movs	r0, #8
+ 588:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G4_PIN, HIGH);
+ 58a:	2101      	movs	r1, #1
+ 58c:	200a      	movs	r0, #10
+ 58e:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G5_PIN, HIGH);
+ 590:	2101      	movs	r1, #1
+ 592:	202c      	movs	r0, #44	; 0x2c
+ 594:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G6_PIN, HIGH);
+ 596:	2101      	movs	r1, #1
+ 598:	202a      	movs	r0, #42	; 0x2a
+ 59a:	47b8      	blx	r7
+        delay_cycles(25000);          
+ 59c:	4816      	ldr	r0, [pc, #88]	; (5f8 <main+0x18c>)
+ 59e:	2100      	movs	r1, #0
+ 5a0:	47b0      	blx	r6
+        gpio_set_pin_level(LED_G1_PIN, LOW);
+ 5a2:	2100      	movs	r1, #0
+ 5a4:	2006      	movs	r0, #6
+ 5a6:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G2_PIN, LOW);
+ 5a8:	2100      	movs	r1, #0
+ 5aa:	2028      	movs	r0, #40	; 0x28
+ 5ac:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G3_PIN, LOW);
+ 5ae:	2100      	movs	r1, #0
+ 5b0:	2008      	movs	r0, #8
+ 5b2:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G4_PIN, LOW);
+ 5b4:	2100      	movs	r1, #0
+ 5b6:	200a      	movs	r0, #10
+ 5b8:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G5_PIN, LOW);
+ 5ba:	2100      	movs	r1, #0
+ 5bc:	202c      	movs	r0, #44	; 0x2c
+ 5be:	47b8      	blx	r7
+        gpio_set_pin_level(LED_G6_PIN, LOW);
+ 5c0:	2100      	movs	r1, #0
+ 5c2:	202a      	movs	r0, #42	; 0x2a
+ 5c4:	47b8      	blx	r7
+        delay_cycles(50000);          
+ 5c6:	0020      	movs	r0, r4
+ 5c8:	0029      	movs	r1, r5
+ 5ca:	47b0      	blx	r6
+        
+        // Top level state machine
+        switch (top_state)
+ 5cc:	4b0c      	ldr	r3, [pc, #48]	; (600 <main+0x194>)
+ 5ce:	781b      	ldrb	r3, [r3, #0]
+ 5d0:	e7a6      	b.n	520 <main+0xb4>
+ 5d2:	46c0      	nop			; (mov r8, r8)
+ 5d4:	00000249 	.word	0x00000249
+ 5d8:	00000115 	.word	0x00000115
+ 5dc:	000003a9 	.word	0x000003a9
+ 5e0:	000003c9 	.word	0x000003c9
+ 5e4:	000003ed 	.word	0x000003ed
+ 5e8:	00000445 	.word	0x00000445
+ 5ec:	00000459 	.word	0x00000459
+ 5f0:	0000032d 	.word	0x0000032d
+ 5f4:	00000161 	.word	0x00000161
+ 5f8:	000061a8 	.word	0x000061a8
+ 5fc:	0000c350 	.word	0x0000c350
+ 600:	2000044c 	.word	0x2000044c
+
+00000604 <__libc_init_array>:
+ 604:	b570      	push	{r4, r5, r6, lr}
+ 606:	4e0d      	ldr	r6, [pc, #52]	; (63c <__libc_init_array+0x38>)
+ 608:	4d0d      	ldr	r5, [pc, #52]	; (640 <__libc_init_array+0x3c>)
+ 60a:	2400      	movs	r4, #0
+ 60c:	1bad      	subs	r5, r5, r6
+ 60e:	10ad      	asrs	r5, r5, #2
+ 610:	d005      	beq.n	61e <__libc_init_array+0x1a>
+ 612:	00a3      	lsls	r3, r4, #2
+ 614:	58f3      	ldr	r3, [r6, r3]
+ 616:	3401      	adds	r4, #1
+ 618:	4798      	blx	r3
+ 61a:	42a5      	cmp	r5, r4
+ 61c:	d1f9      	bne.n	612 <__libc_init_array+0xe>
+ 61e:	f000 f8f7 	bl	810 <_init>
+ 622:	4e08      	ldr	r6, [pc, #32]	; (644 <__libc_init_array+0x40>)
+ 624:	4d08      	ldr	r5, [pc, #32]	; (648 <__libc_init_array+0x44>)
+ 626:	2400      	movs	r4, #0
+ 628:	1bad      	subs	r5, r5, r6
+ 62a:	10ad      	asrs	r5, r5, #2
+ 62c:	d005      	beq.n	63a <__libc_init_array+0x36>
+ 62e:	00a3      	lsls	r3, r4, #2
+ 630:	58f3      	ldr	r3, [r6, r3]
+ 632:	3401      	adds	r4, #1
+ 634:	4798      	blx	r3
+ 636:	42a5      	cmp	r5, r4
+ 638:	d1f9      	bne.n	62e <__libc_init_array+0x2a>
+ 63a:	bd70      	pop	{r4, r5, r6, pc}
+ 63c:	0000081c 	.word	0x0000081c
+ 640:	0000081c 	.word	0x0000081c
+ 644:	0000081c 	.word	0x0000081c
+ 648:	00000824 	.word	0x00000824
+
+0000064c <memset>:
+ 64c:	b570      	push	{r4, r5, r6, lr}
+ 64e:	0783      	lsls	r3, r0, #30
+ 650:	d03f      	beq.n	6d2 <memset+0x86>
+ 652:	1e54      	subs	r4, r2, #1
+ 654:	2a00      	cmp	r2, #0
+ 656:	d03b      	beq.n	6d0 <memset+0x84>
+ 658:	b2ce      	uxtb	r6, r1
+ 65a:	0003      	movs	r3, r0
+ 65c:	2503      	movs	r5, #3
+ 65e:	e003      	b.n	668 <memset+0x1c>
+ 660:	1e62      	subs	r2, r4, #1
+ 662:	2c00      	cmp	r4, #0
+ 664:	d034      	beq.n	6d0 <memset+0x84>
+ 666:	0014      	movs	r4, r2
+ 668:	3301      	adds	r3, #1
+ 66a:	1e5a      	subs	r2, r3, #1
+ 66c:	7016      	strb	r6, [r2, #0]
+ 66e:	422b      	tst	r3, r5
+ 670:	d1f6      	bne.n	660 <memset+0x14>
+ 672:	2c03      	cmp	r4, #3
+ 674:	d924      	bls.n	6c0 <memset+0x74>
+ 676:	25ff      	movs	r5, #255	; 0xff
+ 678:	400d      	ands	r5, r1
+ 67a:	022a      	lsls	r2, r5, #8
+ 67c:	4315      	orrs	r5, r2
+ 67e:	042a      	lsls	r2, r5, #16
+ 680:	4315      	orrs	r5, r2
+ 682:	2c0f      	cmp	r4, #15
+ 684:	d911      	bls.n	6aa <memset+0x5e>
+ 686:	0026      	movs	r6, r4
+ 688:	3e10      	subs	r6, #16
+ 68a:	0936      	lsrs	r6, r6, #4
+ 68c:	3601      	adds	r6, #1
+ 68e:	0136      	lsls	r6, r6, #4
+ 690:	001a      	movs	r2, r3
+ 692:	199b      	adds	r3, r3, r6
+ 694:	6015      	str	r5, [r2, #0]
+ 696:	6055      	str	r5, [r2, #4]
+ 698:	6095      	str	r5, [r2, #8]
+ 69a:	60d5      	str	r5, [r2, #12]
+ 69c:	3210      	adds	r2, #16
+ 69e:	4293      	cmp	r3, r2
+ 6a0:	d1f8      	bne.n	694 <memset+0x48>
+ 6a2:	220f      	movs	r2, #15
+ 6a4:	4014      	ands	r4, r2
+ 6a6:	2c03      	cmp	r4, #3
+ 6a8:	d90a      	bls.n	6c0 <memset+0x74>
+ 6aa:	1f26      	subs	r6, r4, #4
+ 6ac:	08b6      	lsrs	r6, r6, #2
+ 6ae:	3601      	adds	r6, #1
+ 6b0:	00b6      	lsls	r6, r6, #2
+ 6b2:	001a      	movs	r2, r3
+ 6b4:	199b      	adds	r3, r3, r6
+ 6b6:	c220      	stmia	r2!, {r5}
+ 6b8:	4293      	cmp	r3, r2
+ 6ba:	d1fc      	bne.n	6b6 <memset+0x6a>
+ 6bc:	2203      	movs	r2, #3
+ 6be:	4014      	ands	r4, r2
+ 6c0:	2c00      	cmp	r4, #0
+ 6c2:	d005      	beq.n	6d0 <memset+0x84>
+ 6c4:	b2c9      	uxtb	r1, r1
+ 6c6:	191c      	adds	r4, r3, r4
+ 6c8:	7019      	strb	r1, [r3, #0]
+ 6ca:	3301      	adds	r3, #1
+ 6cc:	429c      	cmp	r4, r3
+ 6ce:	d1fb      	bne.n	6c8 <memset+0x7c>
+ 6d0:	bd70      	pop	{r4, r5, r6, pc}
+ 6d2:	0014      	movs	r4, r2
+ 6d4:	0003      	movs	r3, r0
+ 6d6:	e7cc      	b.n	672 <memset+0x26>
+
+000006d8 <register_fini>:
+ 6d8:	4b03      	ldr	r3, [pc, #12]	; (6e8 <register_fini+0x10>)
+ 6da:	b510      	push	{r4, lr}
+ 6dc:	2b00      	cmp	r3, #0
+ 6de:	d002      	beq.n	6e6 <register_fini+0xe>
+ 6e0:	4802      	ldr	r0, [pc, #8]	; (6ec <register_fini+0x14>)
+ 6e2:	f000 f805 	bl	6f0 <atexit>
+ 6e6:	bd10      	pop	{r4, pc}
+ 6e8:	00000000 	.word	0x00000000
+ 6ec:	00000701 	.word	0x00000701
+
+000006f0 <atexit>:
+ 6f0:	b510      	push	{r4, lr}
+ 6f2:	0001      	movs	r1, r0
+ 6f4:	2300      	movs	r3, #0
+ 6f6:	2200      	movs	r2, #0
+ 6f8:	2000      	movs	r0, #0
+ 6fa:	f000 f81b 	bl	734 <__register_exitproc>
+ 6fe:	bd10      	pop	{r4, pc}
+
+00000700 <__libc_fini_array>:
+ 700:	b570      	push	{r4, r5, r6, lr}
+ 702:	4b09      	ldr	r3, [pc, #36]	; (728 <__libc_fini_array+0x28>)
+ 704:	4c09      	ldr	r4, [pc, #36]	; (72c <__libc_fini_array+0x2c>)
+ 706:	1ae4      	subs	r4, r4, r3
+ 708:	10a4      	asrs	r4, r4, #2
+ 70a:	d009      	beq.n	720 <__libc_fini_array+0x20>
+ 70c:	4a08      	ldr	r2, [pc, #32]	; (730 <__libc_fini_array+0x30>)
+ 70e:	18a5      	adds	r5, r4, r2
+ 710:	00ad      	lsls	r5, r5, #2
+ 712:	18ed      	adds	r5, r5, r3
+ 714:	682b      	ldr	r3, [r5, #0]
+ 716:	3c01      	subs	r4, #1
+ 718:	4798      	blx	r3
+ 71a:	3d04      	subs	r5, #4
+ 71c:	2c00      	cmp	r4, #0
+ 71e:	d1f9      	bne.n	714 <__libc_fini_array+0x14>
+ 720:	f000 f880 	bl	824 <_fini>
+ 724:	bd70      	pop	{r4, r5, r6, pc}
+ 726:	46c0      	nop			; (mov r8, r8)
+ 728:	00000830 	.word	0x00000830
+ 72c:	00000834 	.word	0x00000834
+ 730:	3fffffff 	.word	0x3fffffff
+
+00000734 <__register_exitproc>:
+ 734:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 736:	4644      	mov	r4, r8
+ 738:	465f      	mov	r7, fp
+ 73a:	4656      	mov	r6, sl
+ 73c:	464d      	mov	r5, r9
+ 73e:	469b      	mov	fp, r3
+ 740:	4b2f      	ldr	r3, [pc, #188]	; (800 <__register_exitproc+0xcc>)
+ 742:	b4f0      	push	{r4, r5, r6, r7}
+ 744:	681c      	ldr	r4, [r3, #0]
+ 746:	23a4      	movs	r3, #164	; 0xa4
+ 748:	005b      	lsls	r3, r3, #1
+ 74a:	0005      	movs	r5, r0
+ 74c:	58e0      	ldr	r0, [r4, r3]
+ 74e:	000e      	movs	r6, r1
+ 750:	4690      	mov	r8, r2
+ 752:	2800      	cmp	r0, #0
+ 754:	d04b      	beq.n	7ee <__register_exitproc+0xba>
+ 756:	6843      	ldr	r3, [r0, #4]
+ 758:	2b1f      	cmp	r3, #31
+ 75a:	dc0d      	bgt.n	778 <__register_exitproc+0x44>
+ 75c:	1c5c      	adds	r4, r3, #1
+ 75e:	2d00      	cmp	r5, #0
+ 760:	d121      	bne.n	7a6 <__register_exitproc+0x72>
+ 762:	3302      	adds	r3, #2
+ 764:	009b      	lsls	r3, r3, #2
+ 766:	6044      	str	r4, [r0, #4]
+ 768:	501e      	str	r6, [r3, r0]
+ 76a:	2000      	movs	r0, #0
+ 76c:	bc3c      	pop	{r2, r3, r4, r5}
+ 76e:	4690      	mov	r8, r2
+ 770:	4699      	mov	r9, r3
+ 772:	46a2      	mov	sl, r4
+ 774:	46ab      	mov	fp, r5
+ 776:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
+ 778:	4b22      	ldr	r3, [pc, #136]	; (804 <__register_exitproc+0xd0>)
+ 77a:	2b00      	cmp	r3, #0
+ 77c:	d03c      	beq.n	7f8 <__register_exitproc+0xc4>
+ 77e:	20c8      	movs	r0, #200	; 0xc8
+ 780:	0040      	lsls	r0, r0, #1
+ 782:	e000      	b.n	786 <__register_exitproc+0x52>
+ 784:	bf00      	nop
+ 786:	2800      	cmp	r0, #0
+ 788:	d036      	beq.n	7f8 <__register_exitproc+0xc4>
+ 78a:	22a4      	movs	r2, #164	; 0xa4
+ 78c:	2300      	movs	r3, #0
+ 78e:	0052      	lsls	r2, r2, #1
+ 790:	58a1      	ldr	r1, [r4, r2]
+ 792:	6043      	str	r3, [r0, #4]
+ 794:	6001      	str	r1, [r0, #0]
+ 796:	50a0      	str	r0, [r4, r2]
+ 798:	3240      	adds	r2, #64	; 0x40
+ 79a:	5083      	str	r3, [r0, r2]
+ 79c:	3204      	adds	r2, #4
+ 79e:	5083      	str	r3, [r0, r2]
+ 7a0:	2401      	movs	r4, #1
+ 7a2:	2d00      	cmp	r5, #0
+ 7a4:	d0dd      	beq.n	762 <__register_exitproc+0x2e>
+ 7a6:	009a      	lsls	r2, r3, #2
+ 7a8:	4691      	mov	r9, r2
+ 7aa:	4481      	add	r9, r0
+ 7ac:	4642      	mov	r2, r8
+ 7ae:	2188      	movs	r1, #136	; 0x88
+ 7b0:	464f      	mov	r7, r9
+ 7b2:	507a      	str	r2, [r7, r1]
+ 7b4:	22c4      	movs	r2, #196	; 0xc4
+ 7b6:	0052      	lsls	r2, r2, #1
+ 7b8:	4690      	mov	r8, r2
+ 7ba:	4480      	add	r8, r0
+ 7bc:	4642      	mov	r2, r8
+ 7be:	3987      	subs	r1, #135	; 0x87
+ 7c0:	4099      	lsls	r1, r3
+ 7c2:	6812      	ldr	r2, [r2, #0]
+ 7c4:	468a      	mov	sl, r1
+ 7c6:	430a      	orrs	r2, r1
+ 7c8:	4694      	mov	ip, r2
+ 7ca:	4642      	mov	r2, r8
+ 7cc:	4661      	mov	r1, ip
+ 7ce:	6011      	str	r1, [r2, #0]
+ 7d0:	2284      	movs	r2, #132	; 0x84
+ 7d2:	4649      	mov	r1, r9
+ 7d4:	465f      	mov	r7, fp
+ 7d6:	0052      	lsls	r2, r2, #1
+ 7d8:	508f      	str	r7, [r1, r2]
+ 7da:	2d02      	cmp	r5, #2
+ 7dc:	d1c1      	bne.n	762 <__register_exitproc+0x2e>
+ 7de:	0002      	movs	r2, r0
+ 7e0:	4655      	mov	r5, sl
+ 7e2:	328d      	adds	r2, #141	; 0x8d
+ 7e4:	32ff      	adds	r2, #255	; 0xff
+ 7e6:	6811      	ldr	r1, [r2, #0]
+ 7e8:	430d      	orrs	r5, r1
+ 7ea:	6015      	str	r5, [r2, #0]
+ 7ec:	e7b9      	b.n	762 <__register_exitproc+0x2e>
+ 7ee:	0020      	movs	r0, r4
+ 7f0:	304d      	adds	r0, #77	; 0x4d
+ 7f2:	30ff      	adds	r0, #255	; 0xff
+ 7f4:	50e0      	str	r0, [r4, r3]
+ 7f6:	e7ae      	b.n	756 <__register_exitproc+0x22>
+ 7f8:	2001      	movs	r0, #1
+ 7fa:	4240      	negs	r0, r0
+ 7fc:	e7b6      	b.n	76c <__register_exitproc+0x38>
+ 7fe:	46c0      	nop			; (mov r8, r8)
+ 800:	0000080c 	.word	0x0000080c
+ 804:	00000000 	.word	0x00000000
+ 808:	00000043 	.word	0x00000043
+
+0000080c <_global_impure_ptr>:
+ 80c:	20000008                                ... 
+
+00000810 <_init>:
+ 810:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 812:	46c0      	nop			; (mov r8, r8)
+ 814:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 816:	bc08      	pop	{r3}
+ 818:	469e      	mov	lr, r3
+ 81a:	4770      	bx	lr
+
+0000081c <__init_array_start>:
+ 81c:	000006d9 	.word	0x000006d9
+
+00000820 <__frame_dummy_init_array_entry>:
+ 820:	000000dd                                ....
+
+00000824 <_fini>:
+ 824:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 826:	46c0      	nop			; (mov r8, r8)
+ 828:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 82a:	bc08      	pop	{r3}
+ 82c:	469e      	mov	lr, r3
+ 82e:	4770      	bx	lr
+
+00000830 <__fini_array_start>:
+ 830:	000000b5 	.word	0x000000b5

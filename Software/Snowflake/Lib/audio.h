@@ -10,6 +10,6 @@
 #ifndef _AUDIO_H
 #define _AUDIO_H
 
-void amp_init(void);
+void audio_init(void);
 
 #endif /* _AUDIO_H */

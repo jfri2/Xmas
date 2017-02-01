@@ -7,7 +7,7 @@
 * All rights reserved
 */
 
-#include "pb.h"
+#include "lib/pb.h"
 #include "common.h"
 
 /*!

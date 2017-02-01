@@ -7,7 +7,7 @@
 * All rights reserved
 */
 
-#include "led.h"
+#include "lib/led.h"
 #include "common.h"
 
 /*!
@@ -16,7 +16,7 @@
 */
 void led_init(void)
 {        
-    // Configure LEDs as outputs and set low
+    // Configure LEDs as outputs & set low
     gpio_pin_config(LED_R1_PIN, &gpio_output_cfg_low);
     gpio_pin_config(LED_G1_PIN, &gpio_output_cfg_low);
     gpio_pin_config(LED_R2_PIN, &gpio_output_cfg_low);

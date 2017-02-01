@@ -7,7 +7,7 @@
 * All rights reserved
 */
 
-#include "audio.h"
+#include "lib/audio.h"
 #include "common.h"
 
 /*!
@@ -17,6 +17,6 @@
 void audio_init(void)
 {   
     // Configure amplifier & audio related discretes as outputs. Turn them off
-    gpio_pin_config(AMP_SHDN_PIN, gpio_output_cfg_high);
-    gpio_pin_config(VREF_PIN, gpio_output_cfg_low);
+    gpio_pin_config(AMP_SHDN_PIN, &gpio_output_cfg_high);
+    gpio_pin_config(VREF_PIN, &gpio_output_cfg_low);
 }

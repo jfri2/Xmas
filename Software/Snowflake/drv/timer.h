@@ -1,4 +1,4 @@
-/** @file module.h
+/** @file timer.h
 *
 * @brief A description of the module's purpose.
 *
@@ -7,18 +7,17 @@
 * All rights reserved
 */
 
-#ifndef _MODULE_H
-#define _MODULE_H
+#ifndef _TIMER_H
+#define _TIMER_H
 
 #ifdef __cplusplus
 extern "C" 
 {
 #endif
 
-void adc_read(uint8_t adc_mux, uint16_t *adc_val, uint16_t adc_val_len);
-
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* _MODULE_H */
+#endif /* _TIMER_H */
+

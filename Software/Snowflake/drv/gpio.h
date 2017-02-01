@@ -25,7 +25,7 @@ extern "C"
 
 typedef enum
 {
-    GPIO_PORT_A,
+    GPIO_PORT_A = 0,
     GPIO_PORT_B    
 } eGpioPortLetter;
 
@@ -34,20 +34,20 @@ typedef enum
 ///////////////////////////////////////////////////////////////////////////////
 typedef enum
 {
-	INPUT,
+	INPUT = 0,
 	OUTPUT,
 	PERIPH
 } eGpioType;
 
 typedef enum
 {
-	HIGHZ,
+	HIGHZ = 0,
 	PULLUP
 } eGpioPull;
 
 typedef enum
 {
-	LOW,
+	LOW = 0,
 	HIGH
 } eGpioLevel;
 
