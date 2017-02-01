@@ -29,11 +29,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  12 .debug_macro  00015b3e  00000000  00000000  00023499  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_line   00004ad9  00000000  00000000  00038fd7  2**0
+ 13 .debug_line   00004aca  00000000  00000000  00038fd7  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_str    0007e9b9  00000000  00000000  0003dab0  2**0
+ 14 .debug_str    0007e9c3  00000000  00000000  0003daa1  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_frame  0000034c  00000000  00000000  000bc46c  2**2
+ 15 .debug_frame  0000034c  00000000  00000000  000bc464  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -724,7 +724,7 @@ void flash_init(void)
 void led_init(void)
 {        
  3ec:	b570      	push	{r4, r5, r6, lr}
-    // Configure LEDs as outputs & set low
+    // Configure LEDs as outputs and set low
     gpio_pin_config(LED_R1_PIN, &gpio_output_cfg_low);
  3ee:	4d13      	ldr	r5, [pc, #76]	; (43c <led_init+0x50>)
  3f0:	0029      	movs	r1, r5
@@ -813,6 +813,7 @@ void usb_app_init(void)
  45c:	2016      	movs	r0, #22
  45e:	4b02      	ldr	r3, [pc, #8]	; (468 <usb_app_init+0x10>)
  460:	4798      	blx	r3
+
 }
  462:	bd10      	pop	{r4, pc}
  464:	20000458 	.word	0x20000458

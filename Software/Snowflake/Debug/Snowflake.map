@@ -2265,19 +2265,19 @@ OUTPUT(Snowflake.elf elf32-littlearm)
  .debug_macro   0x000153ca      0x3a6 usb_app.o
  .debug_macro   0x00015770      0x3ce main.o
 
-.debug_line     0x00000000     0x4ad9
+.debug_line     0x00000000     0x4aca
  .debug_line    0x00000000      0x776 common.o
  .debug_line    0x00000776      0x75f Device_Startup/startup_saml21.o
  .debug_line    0x00000ed5      0x74c Device_Startup/system_saml21.o
  .debug_line    0x00001621      0x7b6 gpio.o
- .debug_line    0x00001dd7      0x76f audio.o
- .debug_line    0x00002546      0x770 flash.o
- .debug_line    0x00002cb6      0x775 led.o
- .debug_line    0x0000342b      0x768 pb.o
- .debug_line    0x00003b93      0x772 usb_app.o
- .debug_line    0x00004305      0x7d4 main.o
+ .debug_line    0x00001dd7      0x76c audio.o
+ .debug_line    0x00002543      0x76d flash.o
+ .debug_line    0x00002cb0      0x772 led.o
+ .debug_line    0x00003422      0x765 pb.o
+ .debug_line    0x00003b87      0x76f usb_app.o
+ .debug_line    0x000042f6      0x7d4 main.o
 
-.debug_str      0x00000000    0x7e9b9
+.debug_str      0x00000000    0x7e9c3
  .debug_str     0x00000000    0x7e274 common.o
                               0x7e64e (size before relaxing)
  .debug_str     0x0007e274      0x537 Device_Startup/startup_saml21.o
@@ -2286,17 +2286,17 @@ OUTPUT(Snowflake.elf elf32-littlearm)
                               0x7e357 (size before relaxing)
  .debug_str     0x0007e817       0xc7 gpio.o
                               0x7e500 (size before relaxing)
- .debug_str     0x0007e8de       0x22 audio.o
-                              0x7e630 (size before relaxing)
- .debug_str     0x0007e900       0x22 flash.o
-                              0x7e630 (size before relaxing)
- .debug_str     0x0007e922       0x1c led.o
-                              0x7e62a (size before relaxing)
- .debug_str     0x0007e93e       0x19 pb.o
-                              0x7e627 (size before relaxing)
- .debug_str     0x0007e957       0x28 usb_app.o
-                              0x7e636 (size before relaxing)
- .debug_str     0x0007e97f       0x3a main.o
+ .debug_str     0x0007e8de       0x24 audio.o
+                              0x7e632 (size before relaxing)
+ .debug_str     0x0007e902       0x24 flash.o
+                              0x7e632 (size before relaxing)
+ .debug_str     0x0007e926       0x1e led.o
+                              0x7e62c (size before relaxing)
+ .debug_str     0x0007e944       0x1b pb.o
+                              0x7e629 (size before relaxing)
+ .debug_str     0x0007e95f       0x2a usb_app.o
+                              0x7e638 (size before relaxing)
+ .debug_str     0x0007e989       0x3a main.o
                               0x7e677 (size before relaxing)
 
 .debug_frame    0x00000000      0x34c
