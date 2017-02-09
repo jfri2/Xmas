@@ -10,11 +10,6 @@
 #ifndef _GPIO_H
 #define _GPIO_H
 
-#ifdef __cplusplus
-extern "C" 
-{
-#endif
-
 #include <stdint.h>
 #include <stdbool.h>
 
@@ -27,7 +22,7 @@ typedef enum
 {
     GPIO_PORT_A = 0,
     GPIO_PORT_B    
-} eGpioPortLetter;
+} GpioPortLetter_t;
 
 ///////////////////////////////////////////////////////////////////////////////
 // GPIO Pin Configuration Enums
@@ -37,19 +32,19 @@ typedef enum
 	INPUT = 0,
 	OUTPUT,
 	PERIPH
-} eGpioType;
+} GpioType_t;
 
 typedef enum
 {
 	HIGHZ = 0,
 	PULLUP
-} eGpioPull;
+} GpioPull_t;
 
 typedef enum
 {
 	LOW = 0,
 	HIGH
-} eGpioLevel;
+} GpioLevel_t;
 
 typedef enum
 {
@@ -62,29 +57,25 @@ typedef enum
 	PERIPH_G,
 	PERIPH_H,
 	PERIPH_I
-} eGpioPeriph;
+} GpioPeriph_t;
 
 ///////////////////////////////////////////////////////////////////////////////
 // GPIO Pin Configuration Struct
 ///////////////////////////////////////////////////////////////////////////////
 typedef struct
 {
-	eGpioType		pin_type;
-	eGpioLevel		default_drive;
-	eGpioPull		pull;
-    eGpioPeriph     periph_function;
-} sGpioPinConfig;
+	GpioType_t		pin_type;
+	GpioLevel_t		default_drive;
+	GpioPull_t		pull;
+    GpioPeriph_t     periph_function;
+} GpioPinConfig_t;
 
 ///////////////////////////////////////////////////////////////////////////////
 // GPIO Functions
 ///////////////////////////////////////////////////////////////////////////////
-void gpio_pin_config(uint32_t pin, sGpioPinConfig *config);
-void gpio_set_pin_level(uint32_t pin, eGpioLevel level);
+void gpio_pin_config(uint32_t pin, GpioPinConfig_t *config);
+void gpio_set_pin_level(uint32_t pin, GpioLevel_t level);
 void gpio_toggle_pin_level(uint32_t pin);
-eGpioLevel gpio_get_pin_level(uint32_t pin);
-
-#ifdef __cplusplus
-}
-#endif
+GpioLevel_t gpio_get_pin_level(uint32_t pin);
 
 #endif // _GPIO_H
