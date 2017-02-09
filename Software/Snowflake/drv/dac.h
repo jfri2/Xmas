@@ -10,13 +10,17 @@
 #ifndef _DAC_H
 #define _DAC_H
 
-#ifdef __cplusplus
-extern "C" 
+///////////////////////////////////////////////////////////////////////////////
+// DAC Configuration Enums
+///////////////////////////////////////////////////////////////////////////////
+typedef enum
 {
-#endif
+    VREFAU = 0,
+    VDDANA,
+    VREFAB,
+    INTREF,
+} eRefSel;
 
-#ifdef __cplusplus
-}
-#endif
+
 
 #endif /* _DAC_H */

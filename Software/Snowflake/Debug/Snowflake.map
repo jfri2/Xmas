@@ -471,32 +471,208 @@ Discarded input sections
  .debug_macro   0x00000000     0x24a2 Device_Startup/system_saml21.o
  .debug_macro   0x00000000       0x90 Device_Startup/system_saml21.o
  .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
+ .group         0x00000000        0x8 clock.o
  .text          0x00000000        0x0 clock.o
  .data          0x00000000        0x0 clock.o
  .bss           0x00000000        0x0 clock.o
- .debug_info    0x00000000       0x21 clock.o
- .debug_abbrev  0x00000000       0x13 clock.o
+ .text.clk_config_gen
+                0x00000000      0x148 clock.o
+ .rodata        0x00000000       0x2c clock.o
+ .text.clk_assign_to_periph
+                0x00000000        0x4 clock.o
+ .debug_info    0x00000000      0x346 clock.o
+ .debug_abbrev  0x00000000       0xee clock.o
+ .debug_loc     0x00000000      0x155 clock.o
  .debug_aranges
-                0x00000000       0x18 clock.o
- .debug_macro   0x00000000       0x1b clock.o
+                0x00000000       0x28 clock.o
+ .debug_ranges  0x00000000       0x18 clock.o
+ .debug_macro   0x00000000      0x383 clock.o
  .debug_macro   0x00000000      0x826 clock.o
- .debug_line    0x00000000       0x3a clock.o
- .debug_str     0x00000000     0x2347 clock.o
+ .debug_macro   0x00000000       0x22 clock.o
+ .debug_macro   0x00000000       0x87 clock.o
+ .debug_macro   0x00000000       0x44 clock.o
+ .debug_macro   0x00000000       0xfd clock.o
+ .debug_macro   0x00000000       0x22 clock.o
+ .debug_macro   0x00000000      0x1df clock.o
+ .debug_macro   0x00000000       0x22 clock.o
+ .debug_macro   0x00000000       0x46 clock.o
+ .debug_macro   0x00000000       0x3a clock.o
+ .debug_macro   0x00000000       0x1f clock.o
+ .debug_macro   0x00000000      0x250 clock.o
+ .debug_macro   0x00000000      0x713 clock.o
+ .debug_macro   0x00000000      0x8ef clock.o
+ .debug_macro   0x00000000      0x279 clock.o
+ .debug_macro   0x00000000      0x21d clock.o
+ .debug_macro   0x00000000      0x4d0 clock.o
+ .debug_macro   0x00000000      0xe12 clock.o
+ .debug_macro   0x00000000      0x5b6 clock.o
+ .debug_macro   0x00000000      0x5be clock.o
+ .debug_macro   0x00000000      0x823 clock.o
+ .debug_macro   0x00000000      0x305 clock.o
+ .debug_macro   0x00000000      0x5d3 clock.o
+ .debug_macro   0x00000000      0x21c clock.o
+ .debug_macro   0x00000000      0x728 clock.o
+ .debug_macro   0x00000000      0x16e clock.o
+ .debug_macro   0x00000000      0x70e clock.o
+ .debug_macro   0x00000000      0x28c clock.o
+ .debug_macro   0x00000000      0x6fd clock.o
+ .debug_macro   0x00000000      0x2c4 clock.o
+ .debug_macro   0x00000000      0x3c0 clock.o
+ .debug_macro   0x00000000      0x19f clock.o
+ .debug_macro   0x00000000     0x125f clock.o
+ .debug_macro   0x00000000      0xf4c clock.o
+ .debug_macro   0x00000000      0x866 clock.o
+ .debug_macro   0x00000000      0xa36 clock.o
+ .debug_macro   0x00000000      0x8ad clock.o
+ .debug_macro   0x00000000     0x19bd clock.o
+ .debug_macro   0x00000000       0xe7 clock.o
+ .debug_macro   0x00000000     0x13e6 clock.o
+ .debug_macro   0x00000000      0x369 clock.o
+ .debug_macro   0x00000000       0x7c clock.o
+ .debug_macro   0x00000000       0xac clock.o
+ .debug_macro   0x00000000       0xca clock.o
+ .debug_macro   0x00000000       0x4c clock.o
+ .debug_macro   0x00000000       0x94 clock.o
+ .debug_macro   0x00000000       0xdc clock.o
+ .debug_macro   0x00000000       0xb2 clock.o
+ .debug_macro   0x00000000       0x64 clock.o
+ .debug_macro   0x00000000      0x5b1 clock.o
+ .debug_macro   0x00000000      0x19c clock.o
+ .debug_macro   0x00000000       0x70 clock.o
+ .debug_macro   0x00000000       0xa0 clock.o
+ .debug_macro   0x00000000       0xc4 clock.o
+ .debug_macro   0x00000000       0x28 clock.o
+ .debug_macro   0x00000000       0xa0 clock.o
+ .debug_macro   0x00000000       0x40 clock.o
+ .debug_macro   0x00000000       0x7c clock.o
+ .debug_macro   0x00000000       0x40 clock.o
+ .debug_macro   0x00000000      0x16c clock.o
+ .debug_macro   0x00000000       0x34 clock.o
+ .debug_macro   0x00000000       0xee clock.o
+ .debug_macro   0x00000000      0x12a clock.o
+ .debug_macro   0x00000000      0x12a clock.o
+ .debug_macro   0x00000000      0x12a clock.o
+ .debug_macro   0x00000000      0x12a clock.o
+ .debug_macro   0x00000000      0x12a clock.o
+ .debug_macro   0x00000000      0x12a clock.o
+ .debug_macro   0x00000000       0x5e clock.o
+ .debug_macro   0x00000000      0x197 clock.o
+ .debug_macro   0x00000000       0xfa clock.o
+ .debug_macro   0x00000000       0xfa clock.o
+ .debug_macro   0x00000000       0xfa clock.o
+ .debug_macro   0x00000000       0xfa clock.o
+ .debug_macro   0x00000000       0xfa clock.o
+ .debug_macro   0x00000000      0x124 clock.o
+ .debug_macro   0x00000000       0xfa clock.o
+ .debug_macro   0x00000000       0xee clock.o
+ .debug_macro   0x00000000       0x2e clock.o
+ .debug_macro   0x00000000      0x40f clock.o
+ .debug_macro   0x00000000       0x3a clock.o
+ .debug_macro   0x00000000      0x441 clock.o
+ .debug_macro   0x00000000     0x24a2 clock.o
+ .debug_macro   0x00000000       0x90 clock.o
+ .debug_macro   0x00000000       0x28 clock.o
+ .debug_line    0x00000000      0x772 clock.o
+ .debug_str     0x00000000    0x7e72c clock.o
  .comment       0x00000000       0x5a clock.o
+ .debug_frame   0x00000000       0x3c clock.o
  .ARM.attributes
                 0x00000000       0x32 clock.o
  .group         0x00000000        0x8 dac.o
  .text          0x00000000        0x0 dac.o
  .data          0x00000000        0x0 dac.o
  .bss           0x00000000        0x0 dac.o
- .debug_info    0x00000000       0x21 dac.o
- .debug_abbrev  0x00000000       0x13 dac.o
+ .debug_info    0x00000000       0x29 dac.o
+ .debug_abbrev  0x00000000       0x1e dac.o
  .debug_aranges
                 0x00000000       0x18 dac.o
  .debug_macro   0x00000000       0x1b dac.o
  .debug_macro   0x00000000      0x826 dac.o
  .debug_line    0x00000000       0x36 dac.o
- .debug_str     0x00000000     0x2343 dac.o
+ .debug_str     0x00000000     0x2351 dac.o
  .comment       0x00000000       0x5a dac.o
  .ARM.attributes
                 0x00000000       0x32 dac.o
@@ -599,6 +775,7 @@ Discarded input sections
  .debug_macro   0x00000000       0x22 gpio.o
  .debug_macro   0x00000000      0x1df gpio.o
  .debug_macro   0x00000000       0x22 gpio.o
+ .debug_macro   0x00000000       0x46 gpio.o
  .debug_macro   0x00000000       0x3a gpio.o
  .debug_macro   0x00000000       0x1f gpio.o
  .debug_macro   0x00000000      0x250 gpio.o
@@ -2166,7 +2343,7 @@ OUTPUT(Snowflake.elf elf32-littlearm)
  .debug_ranges  0x000000b0       0x10 usb_app.o
  .debug_ranges  0x000000c0       0x10 main.o
 
-.debug_macro    0x00000000    0x15b3e
+.debug_macro    0x00000000    0x15af8
  .debug_macro   0x00000000      0x39c common.o
  .debug_macro   0x0000039c      0x826 common.o
  .debug_macro   0x00000bc2       0x22 common.o
@@ -2257,13 +2434,12 @@ OUTPUT(Snowflake.elf elf32-littlearm)
  .debug_macro   0x00013a80      0x371 Device_Startup/startup_saml21.o
  .debug_macro   0x00013df1      0x377 Device_Startup/system_saml21.o
  .debug_macro   0x00014168      0x384 gpio.o
- .debug_macro   0x000144ec       0x46 gpio.o
- .debug_macro   0x00014532      0x3a6 audio.o
- .debug_macro   0x000148d8      0x3a6 flash.o
- .debug_macro   0x00014c7e      0x3a6 led.o
- .debug_macro   0x00015024      0x3a6 pb.o
- .debug_macro   0x000153ca      0x3a6 usb_app.o
- .debug_macro   0x00015770      0x3ce main.o
+ .debug_macro   0x000144ec      0x3a6 audio.o
+ .debug_macro   0x00014892      0x3a6 flash.o
+ .debug_macro   0x00014c38      0x3a6 led.o
+ .debug_macro   0x00014fde      0x3a6 pb.o
+ .debug_macro   0x00015384      0x3a6 usb_app.o
+ .debug_macro   0x0001572a      0x3ce main.o
 
 .debug_line     0x00000000     0x4aca
  .debug_line    0x00000000      0x776 common.o
