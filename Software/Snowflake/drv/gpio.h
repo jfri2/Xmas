@@ -67,7 +67,7 @@ typedef struct
 	GpioType_t		pin_type;
 	GpioLevel_t		default_drive;
 	GpioPull_t		pull;
-    GpioPeriph_t     periph_function;
+    GpioPeriph_t    periph_function;
 } GpioPinConfig_t;
 
 ///////////////////////////////////////////////////////////////////////////////

@@ -19,7 +19,7 @@ typedef enum
     VDDANA,
     VREFAB,
     INTREF,
-} eRefSel;
+} RefSel_t;
 
 
 

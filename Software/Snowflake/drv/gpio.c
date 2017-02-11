@@ -14,9 +14,9 @@
 * @brief @todo
 * @return void
 */
-void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
+void gpio_pin_config(uint32_t pin, GpioPinConfig_t *config)
 {
-    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+    volatile GpioPortLetter_t gpio_port = GPIO_PORT_A;
     volatile uint32_t pin_bit;
     volatile uint32_t dirclr = 0x0000;
     volatile uint32_t dirset = 0x0000;
@@ -91,9 +91,9 @@ void gpio_pin_config(uint32_t pin, sGpioPinConfig *config)
 * @brief @todo
 * @return void
 */
-void gpio_set_pin_level(uint32_t pin, eGpioLevel level)
+void gpio_set_pin_level(uint32_t pin, GpioLevel_t level)
 {
-    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+    volatile GpioPortLetter_t gpio_port = GPIO_PORT_A;
     volatile uint32_t pin_bit = 0;
     
     // Check to see if the pin is on port B: set an offset & move pin number
@@ -145,7 +145,7 @@ void gpio_set_pin_level(uint32_t pin, eGpioLevel level)
 */
 void gpio_toggle_pin_level(uint32_t pin)
 {
-    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+    volatile GpioPortLetter_t gpio_port = GPIO_PORT_A;
     volatile uint32_t pin_bit = 0;
     
     // Check to see if the pin is on port B: set an offset & move pin number
@@ -176,10 +176,10 @@ void gpio_toggle_pin_level(uint32_t pin)
 * @brief @todo
 * @return eGpioLevel
 */
-eGpioLevel gpio_get_pin_level(uint32_t pin)
+GpioLevel_t gpio_get_pin_level(uint32_t pin)
 {
-    volatile eGpioLevel gpio_level;
-    volatile eGpioPortLetter gpio_port = GPIO_PORT_A;
+    volatile GpioLevel_t gpio_level;
+    volatile GpioPortLetter_t gpio_port = GPIO_PORT_A;
     volatile uint32_t pin_bit = 0;
     
     // Check to see if the pin is on port B: set an offset & move pin number

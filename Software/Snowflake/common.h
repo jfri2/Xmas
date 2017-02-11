@@ -14,10 +14,10 @@
 #include "drv/gpio.h"
 
 // Global Variables
-sGpioPinConfig gpio_output_cfg_low;
-sGpioPinConfig gpio_output_cfg_high;
-sGpioPinConfig gpio_input_cfg_pullup;
-sGpioPinConfig gpio_input_cfg_highz;
+GpioPinConfig_t gpio_output_cfg_low;
+GpioPinConfig_t gpio_output_cfg_high;
+GpioPinConfig_t gpio_input_cfg_pullup;
+GpioPinConfig_t gpio_input_cfg_highz;
 
 void util_init(void);
 void delay_cycles(uint64_t cycles);

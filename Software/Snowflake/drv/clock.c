@@ -13,7 +13,7 @@
 * @brief todo
 * @return void
 */
-void clk_config_gen(eClkGen clk_gen, sClkConfig clk_config)
+void clk_config_gen(ClkGen_t clk_gen, ClkConfig_t clk_config)
 {
     volatile uint32_t gen_ctrl_reg = 0;
     
@@ -118,7 +118,49 @@ void clk_config_gen(eClkGen clk_gen, sClkConfig clk_config)
 * @brief todo
 * @return void
 */
-void clk_assign_to_periph(eClkGen clk_gen, eClkPeriphCh ch)
+void clk_assign_to_periph(ClkGen_t clk_gen, ClkPeriphCh_t ch)
 {
+    volatile uint32_t gen_ctrl_reg = 0;
+        
+    // Read and store selected generator control register
+    switch (clk_gen)
+    {
+        case GEN0:
+        gen_ctrl_reg = REG_GCLK_GENCTRL0;
+        break;
+            
+        case GEN1:
+        gen_ctrl_reg = REG_GCLK_GENCTRL1;
+        break;
+            
+        case GEN2:
+        gen_ctrl_reg = REG_GCLK_GENCTRL2;
+        break;
+            
+        case GEN3:
+        gen_ctrl_reg = REG_GCLK_GENCTRL3;
+        break;
+            
+        case GEN4:
+        gen_ctrl_reg = REG_GCLK_GENCTRL4;
+        break;
+            
+        case GEN5:
+        gen_ctrl_reg = REG_GCLK_GENCTRL5;
+        break;
+            
+        case GEN6:
+        gen_ctrl_reg = REG_GCLK_GENCTRL6;
+        break;
+            
+        case GEN7:
+        gen_ctrl_reg = REG_GCLK_GENCTRL7;
+        break;
+            
+        case GEN8:
+        gen_ctrl_reg = REG_GCLK_GENCTRL8;
+        break;
+    }
+    
     
 }

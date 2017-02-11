@@ -39,7 +39,7 @@ typedef enum
     GEN6,
     GEN7,
     GEN8
-} eClkGen;
+} ClkGen_t;
 
 typedef enum  
 {
@@ -52,11 +52,11 @@ typedef enum
     CLKSRC_OSC16M,
     CLKSRC_DFLL48M,
     CLKSRC_DPLL96M    
-} eClkSrc;
+} ClkSrc_t;
 
 typedef enum
 {
-    CLKCH_DFLL48M_REF = 0       // DFLL48M Reference
+    CLKCH_DFLL48M_REF = 0,      // DFLL48M Reference
     CLKCH_DPLL,                 // FDPLL96M input clock source for reference
     CLKCH_DPLL_32K,             // FDPLL96M 32kHz clk for FDPLL96M internal lock timer
     CLKCH_EIC,                  // EIC
@@ -91,23 +91,23 @@ typedef enum
     CLKCH_DAC,                  // DAC
     CLKCH_PTC,                  // PTC
     CLKCH_CCL                   // CCL
-} eClkPeriphCh;
+} ClkPeriphCh_t;
 
 typedef enum 
 {
     LOW,
     HIGH
-} eClkOffVal;
+} ClkOffVal_t;
 
 typedef struct
 {
-    eClkSrc     source;
+    ClkSrc_t     source;
     uint16_t    div_factor;
     bool        div_pow_2;    
     bool        gen_enable;    
     bool        output_enable;
-    eClkOffVal  off_val;    
-} sClkConfig;
+    ClkOffVal_t  off_val;    
+} ClkConfig_t;
 
 ///////////////////////////////////////////////////////////////////////////////
 // Inline Functions
@@ -122,8 +122,8 @@ inline void clk_sw_rst(void)
 ///////////////////////////////////////////////////////////////////////////////
 // Function Prototypes
 ///////////////////////////////////////////////////////////////////////////////
-void clk_config_gen(eClkGen clk_gen, sClkConfig clk_config);
-void clk_assign_to_periph(eClkGen clk_gen, eClkPeriphCh ch);
+void clk_config_gen(ClkGen_t clk_gen, ClkConfig_t clk_config);
+void clk_assign_to_periph(ClkGen_t clk_gen, ClkPeriphCh_t ch);
 
 
 #endif /* _CLOCK_H */
